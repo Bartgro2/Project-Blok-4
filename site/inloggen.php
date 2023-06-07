@@ -11,7 +11,13 @@
 
 <body>
     <main>
-        
+        <div class="account-pagina">
+            <div class="form-panel">
+                <div class="panel-body">
+                    <div class="stripe-outer">
+                        <div class="form-outer">
+                            <h1> Aanmelden</h1>
+                        </div>
     </main>
 </body>
 
