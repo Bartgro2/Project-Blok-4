@@ -22,7 +22,7 @@
                         <form action="verwerk-inloggen.php" method="post">
 
                             <div class="input-groep">
-                                <label class="input-label" for="gebruikernaam">gebruikersnaam</label>
+                                <label class="input-label" for="gebruikersnaam">gebruikersnaam</label>
                                 <input class="input_gebruiker_login" type="text" name="gebruikersnaam" id="gebruikersnaam">
                             </div>
 

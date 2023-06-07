@@ -6,12 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-$gebruikernaam    = $_POST['gebruikernaam'];
-$wachtwoord = $_POST['wachtwoord'];
+$gebruikernaam    = $_POST['gebruikersnaam'];
+$wachtwoord       = $_POST['wachtwoord'];
 
 require 'database.php';
 
-$sql = "SELECT * FROM gebruikers WHERE gebruikernaam = '$gebruikernaam'";
+$sql = "SELECT * FROM gebruiker WHERE gebruikernaam = '$gebruikernaam'";
 
 $result = mysqli_query($conn, $sql);
 
