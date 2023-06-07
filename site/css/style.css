@@ -18,3 +18,12 @@ div.account-pagina {
     border-radius: 4px;
 }
 
+div.registratie-pagina h1 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+div.registratie-pagina p {
+    text-align: center;
+}
