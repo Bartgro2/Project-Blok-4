@@ -18,6 +18,26 @@
                         <div class="form-outer">
                             <h1> Aanmelden</h1>
                         </div>
+
+                        <form action="verwerk-inloggen.php" method="post">
+
+                            <div class="input-groep">
+                                <label class="input-label" for="gebruikernaam">gebruikersnaam</label>
+                                <input class="input_gebruiker_login" type="text" name="gebruikersnaam" id="gebruikersnaam">
+                            </div>
+
+                            <div class="input-groep">
+                                <label class="input-label" for="wachtwoord">Wachtwoord</label>
+                                <input class="input_wachtwoord_login" type="password" name="wachtwoord" id="wachtwoord">
+                            </div>
+                            <div class="input-groep">
+                                <p> Nieuw bij onze website </p>
+                                <a href="registratie.php"> Geen account klik hier</a>
+                            </div>
+
+                            <div class="input-groep">
+                                <button type="submit" class="input-button"> Aanmelden</button>
+                            </div>
     </main>
 </body>
 
