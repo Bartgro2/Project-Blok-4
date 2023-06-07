@@ -1,9 +1,9 @@
 // Database configuratie
 <?php
 $host  = "mariadb";
-$dbuser = "root";
+$dbuser = "user";
 $dbpass = "password";
-$dbname = "";
+$dbname = "projectblok4";
 
 // Maak een  database connectie
 $conn = mysqli_connect($host, $dbuser, $dbpass, $dbname);// Database configuratie
