@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -47,8 +47,54 @@ div.stripe-outer {
 
 div.form-outer {
     padding-bottom: 20px;
+    padding-left: 20px;
 }
 
-div.form-outer h1 {
-    text-align: left;
+div.input-groep {
+    padding-left: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+div.input-groep p {
+    font-size: 12px;
+    color: gray;
+    padding-left: 120px;
+    padding-bottom: 10px;
+}
+
+div.input-groep a {
+    font-size: 14px;
+}
+
+input.input_wachtwoord_login,
+.input_gebruiker_login {
+    width: 357px;
+}
+
+label.input-label {
+    display: block;
+    padding-bottom: 5px;
+}
+
+div.button-container { 
+    margin: auto;
+    width: 25%;
+    padding: 10px;
+}
+
+button.input_button {
+    width: 357px;
+    height: 30px;
+    color: blue;
+    display: block;
+}
+
+/* algemene forms styling */
+form {
+    max-width: 400px;
+}
+
+input {
+    height: 30px;
 }

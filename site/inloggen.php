@@ -32,10 +32,10 @@
                             </div>
                             <div class="input-groep">
                                 <p> Nieuw bij onze website </p>
-                                <a href="registratie.php"> Geen account klik hier</a>
+                                <p> <a href="registratie.php"> Geen account klik hier</a></p>
                             </div>
 
-                            <div class="input-groep">
+                            <div class="button-container">
                                 <button type="submit" class="input-button"> Aanmelden</button>
                             </div>
     </main>
