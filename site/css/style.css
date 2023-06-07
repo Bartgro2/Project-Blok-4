@@ -52,7 +52,6 @@ div.form-outer {
 
 div.input-groep {
     padding-left: 20px;
-    display: inline-block;
     margin-bottom: 20px;
 }
 
@@ -61,14 +60,16 @@ div.input-groep p {
     color: gray;
     padding-left: 120px;
     padding-bottom: 10px;
+    
 }
 
 div.input-groep a {
     font-size: 14px;
+    
 }
 
 input.input_wachtwoord_login,
-.input_gebruiker_login {
+.input_gebruiker_login, .input-tel, .input-email {
     width: 357px;
 }
 
@@ -87,7 +88,6 @@ button.input_button {
     width: 357px;
     height: 30px;
     color: blue;
-    display: block;
 }
 
 /* algemene forms styling */
@@ -97,4 +97,25 @@ form {
 
 input {
     height: 30px;
+    display: block;
 }
+
+
+div.radio-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+div.radio-buttons h2{
+    font-size: 16px;
+}
+
+label{
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+input[type="radio"] {
+   margin-top: -3px;
+}
+
