@@ -38,3 +38,17 @@ div.form-panel {
 div.panel-body {
     padding: 15px;
 }
+
+div.stripe-outer {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+div.form-outer {
+    padding-bottom: 20px;
+}
+
+div.form-outer h1 {
+    text-align: left;
+}
