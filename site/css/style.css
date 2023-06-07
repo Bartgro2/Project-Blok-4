@@ -4,4 +4,17 @@
     box-sizing: border-box;
 }
 
+/*  styling inloggen.php */
+
+div.account-pagina {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 
