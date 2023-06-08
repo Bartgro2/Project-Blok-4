@@ -2,12 +2,9 @@
 require 'database.php';
 
 
-$sql = "SELECT * FROM gebruiker";
+$sql = "SELECT rol FROM gebruiker";
 $result = mysqli_query($conn, $sql);
 $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-
-
 ?>
 
 
@@ -104,12 +101,10 @@ $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                 <input type="text" name="land" id="land">
                             </div>
                             <div class="input-groep">
-                                <label class="input-label" for="rol" size="2">rol</label>
-                                <select name="rol" id="rol">
-
+                                <label class="input-label" for="rol">rol</label>
+                                <select name="vis" id="rol">
                                     <?php foreach ($rollen as $rol) : ?>
-                                        <option><?php echo $rol['rol'] ?></option>
-
+                                        <option><?php echo $rol['vis']; ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>
@@ -120,13 +115,6 @@ $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </form>
                 </div>
     </main>
-
-
-
-
-
-
-
 </body>
 
 </html>
