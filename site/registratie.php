@@ -2,12 +2,8 @@
 require 'database.php';
 
 
-//de sql query
-$sql = "SELECT rol FROM gebruiker";
-
-//hier wordt de query uitgevoerd met de database
+$sql = "SELECT * FROM gebruiker";
 $result = mysqli_query($conn, $sql);
-
 $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
@@ -37,7 +33,7 @@ $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
                             <h1> Aanmelden</h1>
                         </div>
 
-                        <form action="verwerk-inloggen.php" method="post">
+                        <form action="verwerk-registratie.php" method="post">
 
                             <div class="input-groep">
                                 <label class="input-label" for="gebruikersnaam">gebruikersnaam</label>
@@ -51,15 +47,15 @@ $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
                             <div class="input-groep">
                                 <label class="input-label" for="wachtwoord"> Controleer wachtwoord</label>
                                 <input type="password" name="controleer-wachtwoord" id="wachtwoord">
-
                             </div>
                             <hr>
                             <div class="input-groep">
                                 <div class="radio-buttons">
                                     <h2>Aanhef:</h2>
                                     <label for="radio">Man</label>
-                                    <input type="radio" name="Aanhef" id="Man"> <label for="radio">Vrouw</label>
-                                    <input type="radio" name="Aanhef" id="Vrouw">
+                                    <input type="radio" name="geslacht" id="Man">
+                                    <label for="radio">Vrouw</label>
+                                    <input type="radio" name="geslacht" id="Vrouw">
                                 </div>
                             </div>
                             <div class="input-groep">
@@ -108,11 +104,12 @@ $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                 <input type="text" name="land" id="land">
                             </div>
                             <div class="input-groep">
-                                <label class="input-label" for="rol">rol</label>
+                                <label class="input-label" for="rol" size="2">rol</label>
                                 <select name="rol" id="rol">
+
                                     <?php foreach ($rollen as $rol) : ?>
                                         <option><?php echo $rol['rol'] ?></option>
-                                        
+
                                     <?php endforeach ?>
                                 </select>
                             </div>

@@ -25,8 +25,33 @@ if (!is_array($gebruiker)) {
 if (password_verify($wachtwoord, $gebruiker['wachtwoord'])) {
     session_start();
 
-    $_SESSION['username'] = $gebruiker['gebruikersnaam'];
-    
-    header("location: dashboard.php");
-    exit();
+$_SESSION['username']    = $gebruiker['gebruikersnaam'];
+$_SESSION['userid']      = $gebruiker['id'];
+$_SESSION['role']        = $gebruiker['rol'];
+
+switch ($gebruiker['rol']) {
+    case 'administrator':
+        header('location: admin-dashboard.php');
+        exit();
+        break;
+
+    case 'manager':
+        header('location: employee-dashboard.php');
+        exit();
+        break;
+
+    case 'regular':
+        header('location: dashboard.php');
+        exit();
+        break;
 }
+
+header("location: index.php");
+exit();
+}
+
+header("location: inloggen.php");
+exit();
+
+
+
