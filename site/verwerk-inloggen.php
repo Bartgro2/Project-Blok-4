@@ -6,12 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-$gebruikernaam    = $_POST['gebruikersnaam'];
-$wachtwoord       = $_POST['wachtwoord'];
+$gebruikersnaam    = $_POST['gebruikersnaam'];
+$wachtwoord        = $_POST['wachtwoord'];
 
 require 'database.php';
 
-$sql = "SELECT * FROM gebruiker WHERE gebruikernaam = '$gebruikernaam'";
+$sql = "SELECT * FROM gebruiker WHERE gebruikersnaam = '$gebruikersnaam'";
 
 $result = mysqli_query($conn, $sql);
 
@@ -22,10 +22,10 @@ if (!is_array($gebruiker)) {
     exit();
 }
 
-if ($gebruiker['wachtwoord'] === $_POST['wachtwoord']) {
+if (password_verify($wachtwoord, $gebruiker['wachtwoord'])) {
     session_start();
 
-    $_SESSION['username'] = $gebruiker['gebruikernaam'];
+    $_SESSION['username'] = $gebruiker['gebruikersnaam'];
     
     header("location: dashboard.php");
     exit();

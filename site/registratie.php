@@ -50,7 +50,7 @@ $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
                             </div>
                             <div class="input-groep">
                                 <label class="input-label" for="wachtwoord"> Controleer wachtwoord</label>
-                                <input type="password" name="wachtwoord" id="wachtwoord">
+                                <input type="password" name="controleer-wachtwoord" id="wachtwoord">
 
                             </div>
                             <hr>
