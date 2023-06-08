@@ -30,8 +30,8 @@
                                 <input type="text" id="email" name="email" placeholder="email-address ">
                             </div>
                             <div class="form_group">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" name="password" placeholder="password">
+                                <label for="wachtwoord">wachtwoord</label>
+                                <input type="password" id="wachtwoord" name="wachtwoord" placeholder="wachtwoord">
                             </div>
                             <div>
                                 <a href="signUp.php" class="form_content_switch">I don't have an account</a>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("database.php");
 
 if (isset($_POST['email']) && isset($_POST['wachtwoord'])) {
@@ -13,51 +12,33 @@ if (isset($_POST['email']) && isset($_POST['wachtwoord'])) {
     }
 
     $email = validate($_POST['email']);
-    $pass = validate($_POST['wachtwoord']);
 
     if (empty($email)) {
         header("Location: login.php?error=Email-address is required");
         exit();
-    } else if (empty($pass)) {
+    } else if (empty($_POST['wachtwoord'])) {
         header("Location: login.php?error=Password is required");
         exit();
     } else {
-        $sql = "SELECT * FROM users WHERE email = '$email' and wachtwoord = '$pass'";
+        $sql = "SELECT * FROM users WHERE email = '$email'"; // check de single-qoutes naast email
 
+        //dan voeren we de query uit:
         $result = mysqli_query($conn, $sql);
 
-        if (mysqli_num_rows($result) === 1) {
-            $row = mysqli_fetch_assoc($result);
+        $user = mysqli_fetch_assoc($result);
 
-            if ($row['email'] === $email && $row['wachtwoord'] === $pass && $row['role'] == 'employee') {
-                $_SESSION['email'] = $row['email'];
-                $_SESSION['voornaam'] = $row['voornaam'];
-                $_SESSION['user_id'] = $row['user_id'];
-                $_SESSION['role'] = $row['role'];
+        if (!is_array($user)) {
+            header("location: inloggen.php");
+            exit;
+        }
 
-                header("location: index.php");
-                exit();
-
-            }elseif($row['email'] === $email && $row['wachtwoord'] === $pass && $row['role'] == 'administrator'){
-                $_SESSION['email'] = $row['email'];
-                $_SESSION['voornaam'] = $row['voornaam'];
-                $_SESSION['user_id'] = $row['user_id'];
-                $_SESSION['role'] = $row['role'];
-
-                header("Location: index.php");
-                exit();
-            }elseif($row['email'] === $email && $row['wachtwoord'] === $pass && $row['role'] == 'customer'){
-                $_SESSION['email'] = $row['email'];
-                $_SESSION['voornaam'] = $row['voornaam'];
-                $_SESSION['user_id'] = $row['user_id'];
-                $_SESSION['role'] = $row['role'];
-
-                header("Location: index.php");
-                exit();
-            } else {
-                header("Location: login.php?error=Incorect Email-address or Password");
-                exit();
-            }
+        if (password_verify($_POST['wachtwoord'], $user['password'])) {
+            session_start();
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['voornaam'] = $user['voornaam'];
+            $_SESSION['userID'] = $user['userID'];
+            header("Location: index.php");
+            exit();
         } else {
             header("Location: login.php?error=Incorect Email-address or Password");
             exit();

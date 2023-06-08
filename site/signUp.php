@@ -45,7 +45,7 @@
                             </div>
                             <div class="form_group">
                                 <label for="achternaam">Achternaam</label>
-                                <?php if (isset($_GET['achternam'])) { ?>
+                                <?php if (isset($_GET['achternaam'])) { ?>
                                     <input type="text" name="achternaam" id="achternaam" value="<?php echo $_GET['achternaam']; ?>">
                                 <?php } else { ?>
                                     <input type="text" name="achternaam" id="achternaam" placeholder="achternaam">
