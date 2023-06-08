@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>Homepage</title>
 </head>
 
 <body>
     <?php
     include('header.php');
     ?>
-    <section id="content">
+    <section id="content" class="page_height">
 
     </section>
     <?php
