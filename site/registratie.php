@@ -1,3 +1,21 @@
+<?php
+require 'database.php';
+
+
+//de sql query
+$sql = "SELECT rol FROM gebruiker";
+
+//hier wordt de query uitgevoerd met de database
+$result = mysqli_query($conn, $sql);
+
+$rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,10 +110,14 @@
                             <div class="input-groep">
                                 <label class="input-label" for="rol">rol</label>
                                 <select name="rol" id="rol">
-
-                                    <option></option>
-
+                                    <?php foreach ($rollen as $rol) : ?>
+                                        <option><?php echo $rol['rol'] ?></option>
+                                        
+                                    <?php endforeach ?>
                                 </select>
+                            </div>
+                            <div class="button-container">
+                                <button type="submit" class="input-button"> Registeren </button>
                             </div>
                     </div>
                     </form>

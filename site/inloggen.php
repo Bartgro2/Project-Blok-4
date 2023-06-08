@@ -22,13 +22,13 @@
                         <form action="verwerk-inloggen.php" method="post">
 
                             <div class="input-groep">
-                                <label class="input-label" for="gebruikersnaam">gebruikersnaam</label>
-                                <input class="input_gebruiker_login" type="text" name="gebruikersnaam" id="gebruikersnaam">
+                                <label class="input-label" for="gebruikernaam">gebruikersnaam</label>
+                                <input type="text" name="gebruikersnaam" id="gebruikersnaam">
                             </div>
 
                             <div class="input-groep">
                                 <label class="input-label" for="wachtwoord">Wachtwoord</label>
-                                <input class="input_wachtwoord_login" type="password" name="wachtwoord" id="wachtwoord">
+                                <input type="password" name="wachtwoord" id="wachtwoord">
                             </div>
                             <div class="input-groep">
                                 <p> Nieuw bij onze website </p>
