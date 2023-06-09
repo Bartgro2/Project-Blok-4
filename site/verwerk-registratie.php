@@ -39,7 +39,6 @@ if (!empty($_POST['gebruikersnaam'])) {
         if ($rol == "administrator") { // checkt of de gebruiker een administrator
             $sql = "INSERT INTO administrator(gebruiker_id) VALUES('$last_id')"; // voeg de waarde van de laatst gemaakte id toe aan de foreign key in administrator
         } else if ($rol == "manager") {
-
             $sql = "INSERT INTO manager(gebruiker_id) VALUES('$last_id')";
         } else if ($rol == "regular") {
             $sql = "INSERT INTO regular(gebruiker_id) VALUES('$last_id')";
