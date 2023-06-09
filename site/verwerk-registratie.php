@@ -20,11 +20,16 @@ if (!empty($_POST['gebruikersnaam'])) {
     $plaats           = $_POST['plaats'];
     $postcode         = $_POST['postcode'];
     $land             = $_POST['land'];
-    $rol              =  $_POST['rol'];
+    $rol              = $_POST['rol'];
 
+    session_start();          // Start the session
+    $_SESSION['rol'] = $rol;
+
+    
 
     require 'database.php';
     // wachtwoord hashen
+ 
     $hashed_password = password_hash($wachtwoord, PASSWORD_DEFAULT);
 
 

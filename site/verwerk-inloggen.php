@@ -9,6 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 $gebruikersnaam    = $_POST['gebruikersnaam'];
 $password          = $_POST['wachtwoord'];
 
+
+
 require 'database.php';
 
 $sql = "SELECT * FROM gebruiker WHERE gebruikersnaam = '$gebruikersnaam'";
@@ -28,10 +30,27 @@ if (password_verify($password, $gebruiker['wachtwoord'])) {
 
     $_SESSION['username']    = $gebruiker['gebruikersnaam'];
     $_SESSION['userid']      = $gebruiker['id'];
+
+    switch ($_SESSION['rol']) {
+        case 'administrator':
+            header('location: dashboard.php');
+            exit();
+            break;
+
+        case 'manager':
+            header('location: employee-dashboard.php');
+            exit();
+            break;
+
+        case 'regular':
+            header('location: store.php');
+            exit();
+            break;
+    }
+
+    header("location: dashboard.php");
+    exit();
 }
 
 header("location: inloggen.php");
 exit();
-
-
-
