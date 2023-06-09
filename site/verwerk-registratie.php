@@ -1,6 +1,6 @@
 <?php
 
-
+require 'database.php';
 if (!empty($_POST['gebruikersnaam'])) {
 
 
@@ -27,7 +27,7 @@ if (!empty($_POST['gebruikersnaam'])) {
 
     
 
-    require 'database.php';
+    
     // wachtwoord hashen
  
     $hashed_password = password_hash($wachtwoord, PASSWORD_DEFAULT);

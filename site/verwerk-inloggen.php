@@ -33,23 +33,20 @@ if (password_verify($password, $gebruiker['wachtwoord'])) {
 
     switch ($_SESSION['rol']) {
         case 'administrator':
-            header('location: dashboard.php');
+            header('location: admin-dashboard.php');
             exit();
             break;
 
         case 'manager':
-            header('location: employee-dashboard.php');
+            header('location: manager-dashboard.php');
             exit();
             break;
 
         case 'regular':
-            header('location: store.php');
+            header('location: regular-dashboard.php');
             exit();
             break;
     }
-
-    header("location: dashboard.php");
-    exit();
 }
 
 header("location: inloggen.php");
