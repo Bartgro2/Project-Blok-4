@@ -4,6 +4,37 @@
     box-sizing: border-box;
 }
 
+/*  navigatie     */
+
+nav {
+    display: flex;
+    height: 50px;
+    font-size: 22px;
+    justify-content: center;
+    background-color: #1520A6;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: grey;
+    transition: .3s;
+}
+
+
+
+
 /*  styling inloggen.php */
 
 div.account-pagina {
