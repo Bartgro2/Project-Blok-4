@@ -1,10 +1,5 @@
 <?php
 require 'database.php';
-
-
-$sql = "SELECT rol FROM gebruiker";
-$result = mysqli_query($conn, $sql);
-$rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 
@@ -102,10 +97,10 @@ $rollen = mysqli_fetch_all($result, MYSQLI_ASSOC);
                             </div>
                             <div class="input-groep">
                                 <label class="input-label" for="rol">rol</label>
-                                <select name="vis" id="rol">
-                                    <?php foreach ($rollen as $rol) : ?>
-                                        <option><?php echo $rol['vis']; ?></option>
-                                    <?php endforeach ?>
+                                <select name="rol" id="rol">
+                                    <option value="administrator">administrator</option>
+                                    <option value="manager">manager</option>
+                                    <option value="regular">regular</option>
                                 </select>
                             </div>
                             <div class="button-container">

@@ -8,10 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
 $gebruikersnaam    = $_POST['gebruikersnaam'];
 $wachtwoord        = $_POST['wachtwoord'];
-
+$gebruiker_id      = $_POST['id'];
 require 'database.php';
 
-$sql = "SELECT * FROM gebruiker WHERE gebruikersnaam = '$gebruikersnaam'";
+$sql = "SELECT gebruikersnaam , wachtwoord , gebruiker_id FROM manager inner join gebruiker on gebruiker.id = manager.gebruiker_id WHERE gebruikersnaam = '$gebruikersnaam' and '$gebruiker_id' = id";
 
 $result = mysqli_query($conn, $sql);
 
@@ -27,11 +27,11 @@ if (password_verify($wachtwoord, $gebruiker['wachtwoord'])) {
 
 $_SESSION['username']    = $gebruiker['gebruikersnaam'];
 $_SESSION['userid']      = $gebruiker['id'];
-$_SESSION['role']        = $gebruiker['rol'];
+$_SESSION['roleid']      = $gebruiker['id'];
 
-switch ($gebruiker['rol']) {
+switch ($gebruiker['id']) {
     case 'administrator':
-        header('location: admin-dashboard.php');
+        header('location: $');
         exit();
         break;
 
