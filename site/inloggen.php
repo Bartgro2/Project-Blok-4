@@ -1,3 +1,8 @@
+<?php require 'database.php'; 
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +15,7 @@
 </head>
 
 <body>
+  <?php include 'nav.php'; ?>
     <main>
         <div class="account-pagina">
             <div class="form-panel">
