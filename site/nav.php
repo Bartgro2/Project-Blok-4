@@ -13,7 +13,13 @@
                 <li> <a href="index.php">Home</a></li>
                 <li> <a href="#">drop</a></li>
                 <li> <a href="#">dop</a></li>
-            <?php } ?>
+            <?php } else  { ?>
+                <li> <a href="index.php">Home</a></li>
+                <li> <a href="#">drop</a></li>
+                <li> <a href="#">dop</a></li>
+           <?php } ?>
+            
         </ul>
     </div>
 </nav>
+

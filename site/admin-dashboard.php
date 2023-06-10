@@ -1,5 +1,9 @@
 <?php require 'database.php'; 
 session_start();
+if ($_SESSION['rol'] != 'administrator'){
+    header("location: inloggen.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +17,14 @@ session_start();
 </head>
 
 <body>
+
     <?php include 'nav.php'; ?>
+    
+    <?php echo "Hallo! " . $_SESSION['username']; ?> 
+    
+    <div>
+        <a href="logout.php">logout</a>
+    </div>
 </body>
 
 </html>
