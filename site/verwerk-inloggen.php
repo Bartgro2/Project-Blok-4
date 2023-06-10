@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header($_SERVER["SERVER_PROTOCOL"] . " 405 Method Not Allowed", true, 405);
-    include 'tools-overzicht.php';
+    include 'inloggen.php';
     exit;
 }
 
@@ -30,25 +30,24 @@ if (password_verify($password, $gebruiker['wachtwoord'])) {
 
     $_SESSION['username']    = $gebruiker['gebruikersnaam'];
     $_SESSION['userid']      = $gebruiker['id'];
-    
-    
-    switch ($_SESSION['rol']) {
-        case 'administrator':
-            header('location: admin-dashboard.php');
-            exit();
-            break;
 
-        case 'manager':
-            header('location: manager-dashboard.php');
-            exit();
-            break;
+    if (($_SESSION['userid'])) {
+        
+        $sql = "SELECT * FROM gebruiker inner join administrator on administrator.gebruiker_id = gebruiker.id";
 
-        case 'regular':
-            header('location: regular-dashboard.php');
-            exit();
-            break;
+        $result = mysqli_query($conn, $sql);
+
+        $administrator = mysqli_fetch_assoc($result);
+        
+        $_SESSION['admin_id'] = $administrator['id'];
+       
+        if( $_SESSION['gebruiker_id'] == $_SESSION['admin_id'])
+        {
+            
+            header("location: admin-dashboard.php");
+            exit;
+        }
     }
 }
 
-header("location: inloggen.php");
-exit();
+
