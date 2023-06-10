@@ -31,6 +31,7 @@ if (password_verify($password, $gebruiker['wachtwoord'])) {
     $_SESSION['username']    = $gebruiker['gebruikersnaam'];
     $_SESSION['userid']      = $gebruiker['id'];
     
+    
     switch ($_SESSION['rol']) {
         case 'administrator':
             header('location: admin-dashboard.php');
