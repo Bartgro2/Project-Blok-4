@@ -13,7 +13,7 @@ $password          = $_POST['wachtwoord'];
 
 require 'database.php';
 
-$sql = "SELECT * FROM gebruiker WHERE gebruikersnaam = '$email'";
+$sql = "SELECT * FROM gebruiker WHERE email = '$email'";
 
 $result = mysqli_query($conn, $sql);
 
