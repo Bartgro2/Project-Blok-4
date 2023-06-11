@@ -28,8 +28,8 @@ session_start();
                         <form action="verwerk-inloggen.php" method="post">
 
                             <div class="input-groep">
-                                <label class="input-label" for="gebruikernaam">gebruikersnaam</label>
-                                <input type="text" name="gebruikersnaam" id="gebruikersnaam">
+                                <label class="input-label" for="email">email</label>
+                                <input type="email" name="email" id="email">
                             </div>
 
                             <div class="input-groep">
