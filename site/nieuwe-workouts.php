@@ -21,7 +21,7 @@ require 'database.php';
     <div class="account-pagina">
         <main>
 
-            <form action="verwerk-inloggen.php" method="post">
+            <form action="verwerk-nieuwe-workouts.php" method="post">
 
                 <div class="input-groep">
                     <label class="input-label" for="omschrijving">omschrijving</label>
@@ -42,7 +42,7 @@ require 'database.php';
                     <input type="date" name="startdatum" id="startdatum">
                 </div>
                 <div class="button-container">
-                    <button type="submit" class="input-button"> Aanmelden</button>
+                    <button type="submit" class="input-button"> Aanmaken</button>
                 </div>
     </div>
     </main>

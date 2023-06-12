@@ -22,8 +22,7 @@ if (!empty($_POST['gebruikersnaam'])) {
     $land             = $_POST['land'];
     $rol              = $_POST['rol'];
 
-    session_start();          // Start the session
-    $_SESSION['rol'] = $rol;
+    
 
     
 
