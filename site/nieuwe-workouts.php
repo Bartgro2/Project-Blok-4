@@ -28,26 +28,7 @@ $gebruiker = mysqli_fetch_all($result,MYSQLI_ASSOC);
             <div class="button-container">
                 <button type="submit" class="input-button"> Aanmelden</button>
             </div>
-            <table>
-                <thead>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </thead>
-
-
-
-
-                <tbody>
-                    </tr>
-                    <tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                </tbody>
-            </table>
+           
     </main>
 </body>
 
