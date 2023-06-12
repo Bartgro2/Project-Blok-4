@@ -38,10 +38,10 @@ if (!empty($_POST['gebruikersnaam'])) {
     VALUES ('$gebruikersnaam','$hashed_password','$geslachten','$voornaam','$tussenvoegsels','$achternaam','$email','$telefoonnummer','$mobielnummer','$straat','$huisnummer','$plaats','$postcode','$land')";
 
     if ($conn->query($sql) === TRUE) {
-
+    
         $last_id = $conn->insert_id; // check de nieuwste gemaakte id
 
-        if ($rol == "administrator") { // checkt of de gebruiker een administrator
+        if ($rol == "administrator") { // checkt of de gebruiker een administrator is
             $sql = "INSERT INTO administrator(gebruiker_id) VALUES('$last_id')"; // voeg de waarde van de laatst gemaakte id toe aan de foreign key in administrator
         } else if ($rol == "manager") {
             $sql = "INSERT INTO manager(gebruiker_id) VALUES('$last_id')";

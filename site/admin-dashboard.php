@@ -20,9 +20,7 @@ session_start();
 
     <?php echo "Hallo! " . $_SESSION['username']; ?>
 
-    <div>
-        <a href="logout.php">logout</a>
-    </div>
+    
 </body>
 
 </html>
