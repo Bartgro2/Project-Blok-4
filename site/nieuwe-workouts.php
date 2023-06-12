@@ -37,10 +37,6 @@ require 'database.php';
                     <input type="duur" name="notitie" id="notitie">
                 </div>
 
-                <div class="input-groep">
-                    <label class="input-label" for="startdatum">startdatum</label>
-                    <input type="date" name="startdatum" id="startdatum">
-                </div>
                 <div class="button-container">
                     <button type="submit" class="input-button"> Aanmaken</button>
                 </div>
