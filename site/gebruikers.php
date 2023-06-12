@@ -1,4 +1,14 @@
+<?php
+require 'database.php';
+$sql = "SELECT user_id FROM  gebruiker";
 
+$result = mysqli_query($conn, $sql);
+
+$gebruiker = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+
+
+?>
 
 
 <!DOCTYPE html>
