@@ -53,6 +53,7 @@ $gebruikers_info = mysqli_fetch_all($result,MYSQLI_ASSOC);
                 <td><?php echo $gebruiker_info['straat']?></td>
                 <td><?php echo $gebruiker_info['huisnummer']?></td>
                 <td><?php echo $gebruiker_info['postcode']?></td>
+                <td><?php echo $gebruiker_info['plaats']?></td>
                 <td><?php echo $gebruiker_info['land']?></td>
                 <td><?php echo $gebruiker_info['telefoonnummer']?></td>
                 <td><?php echo $gebruiker_info['mobielnummer']?></td>
