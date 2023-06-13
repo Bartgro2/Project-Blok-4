@@ -117,7 +117,7 @@ button.input_button {
 
 /* algemene forms styling */
 form {
-    width: 260px;
+      max-width: 260px;
 }
 
 input[type="text"], input[type="tel"] , input[type="email"], input[type="password"] {

@@ -18,8 +18,8 @@ session_start();
 
     <?php include 'nav.php'; ?>
 
-    <?php echo "Hallo! " . $_SESSION['username']; ?>
-
+    <?php echo "Hallo!" . $_SESSION['username']; ?>
+    
     
 </body>
 
