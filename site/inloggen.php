@@ -15,35 +15,34 @@
 </head>
 
 <body>
-  <?php include 'nav.php'; ?>
+    <?php include 'nav.php'; ?>
     <main>
         <div class="account-pagina">
             <div class="form-panel">
-                <div class="panel-body">
-                    <div class="stripe-outer">
-                        <div class="form-outer">
-                            <h1> Aanmelden</h1>
-                        </div>
+                <h1>Aanmelden</h1>
 
-                        <form action="verwerk-inloggen.php" method="post">
+                <form action="verwerk-inloggen.php" method="post">
+                    <div class="input-groep">
+                        <label class="input-label" for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
 
-                            <div class="input-groep">
-                                <label class="input-label" for="email">email</label>
-                                <input type="email" name="email" id="email">
-                            </div>
+                    <div class="input-groep">
+                        <label class="input-label" for="wachtwoord">Wachtwoord</label>
+                        <input type="password" name="wachtwoord" id="wachtwoord">
+                    </div>
 
-                            <div class="input-groep">
-                                <label class="input-label" for="wachtwoord">Wachtwoord</label>
-                                <input type="password" name="wachtwoord" id="wachtwoord">
-                            </div>
-                            <div class="input-groep">
-                                <p> Nieuw bij onze website </p>
-                                <p> <a href="registratie.php"> Geen account klik hier</a></p>
-                            </div>
+                    <div class="input-groep">
+                        <p>Nog geen account?</p>
+                        <p><a href="registratie.php">Registeer hier</a></p>
+                    </div>
 
-                            <div class="button-container">
-                                <button type="submit" class="input-button"> Aanmelden</button>
-                            </div>
+                    <div class="button-container">
+                        <button type="submit" class="input-button">Aanmelden</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
 </body>
 
