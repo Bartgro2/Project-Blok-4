@@ -25,9 +25,7 @@
                     <div class="input-groep">
                         <label class="input-label" for="email">Email</label>
                         <input type="email" name="email" id="email">
-                    </div>
 
-                    <div class="input-groep">
                         <label class="input-label" for="wachtwoord">Wachtwoord</label>
                         <input type="password" name="wachtwoord" id="wachtwoord">
                     </div>
