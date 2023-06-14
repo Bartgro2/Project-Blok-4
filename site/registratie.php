@@ -15,7 +15,7 @@ require 'database.php';
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bc">
+<body>
     <main>
         <div class="account-pagina">
             <div class="form-panel">
@@ -103,6 +103,7 @@ require 'database.php';
                 </form>
             </div>
     </main>
+    <?php require 'footer.php'; ?>
 </body>
 
 </html>
