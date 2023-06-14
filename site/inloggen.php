@@ -19,7 +19,7 @@
     <main>
         <div class="account-pagina">
             <div class="form-panel">
-                <h1>Aanmelden</h1>
+                <h1>Inloggen</h1>
 
                 <form action="verwerk-inloggen.php" method="post">
                     <div class="input-groep">

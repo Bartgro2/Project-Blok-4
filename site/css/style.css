@@ -37,38 +37,43 @@ nav ul li a:hover {
 
 /*  styling inloggen.php */
 .account-pagina {
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 30px;
     margin-bottom: 20px;
 }
-
+.bc {
+    background-color: #fff;
+}
 .form-panel {
     max-width: 400px;
-    width: 100%;
+    height: 100%;
+     width: 80%;
     margin: 0 auto;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 20px;
-    margin-bottom: 20px;
 }
 
 .form-panel h1 {
     text-align: center;
     padding: 20px 0;
-    margin-bottom: 20px; /* Toegevoegde eigenschap */
+    margin-bottom: 20px;
     color: #007bff;
+   
 }
 
 .form-panel input:not(:last-child) {
     margin-bottom: 10px;
 }
+
 
 .input-groep {
     margin-bottom: 10px;
@@ -86,10 +91,9 @@ nav ul li a:hover {
 }
 
 .input-label {
-    width: 140px;
-    padding-bottom: 5px;
     display: block;
 }
+
 
 .button-container {
     text-align: center;
