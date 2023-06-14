@@ -37,6 +37,8 @@ nav ul li a:hover {
     transition: .3s;
 }
 
+/* dropdown voor uitloggen voor nav */
+
 /* footer */
 
 
@@ -55,7 +57,7 @@ footer p {
 }
 
 
-/*  styling inloggen.php */
+/*  form styling ( inloggen, registeren & nieuwe-workouts.php  */
 .account-pagina {
 
     display: flex;
@@ -149,11 +151,11 @@ main {
 
 .radio-buttons {
     display: inline-flex;
-   
+
     align-items: center;
 }
 
-.radio-buttons label{
+.radio-buttons label {
     align-self: center;
 }
 
@@ -162,6 +164,39 @@ main {
     padding-bottom: 10px;
 }
 
-.radio-buttons input[type="radio"]{
+.radio-buttons input[type="radio"] {
     margin-left: 5px;
 }
+
+/*  workouts.php styling */
+
+div.container-table{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+table {
+    width: 50%;
+    border: 1px solid black;
+}
+
+td{
+    width: 23%;
+    text-align: left;
+}
+
+thead{
+    background-color: black;
+    color: white;
+    
+}
+
+tbody{
+   background-color: blue;
+   color: white;
+}
+
+/*  tweede table voor workouts.php   */
+
+/*  table styling voor gebruikers.php */

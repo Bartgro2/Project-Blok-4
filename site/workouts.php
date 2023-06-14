@@ -19,6 +19,7 @@ $workouts_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body>
     <main>
+        <div class="container-table">
         <table>
             <thead>
                 <tr>
