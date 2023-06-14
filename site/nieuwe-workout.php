@@ -18,29 +18,31 @@ require 'database.php';
 </head>
 
 <body>
-    <div class="account-pagina">
-        <main>
+    <main>
+        <div class="account-pagina">
+            <div class="form-panel">
+                <h1>workouts aanmaken</h1>
+                <form action="verwerk-nieuwe-workouts.php" method="post">
 
-            <form action="verwerk-nieuwe-workouts.php" method="post">
+                    <div class="input-groep">
+                        <label for="omschrijving">omschrijving</label>
+                        <input type="text" name="omschrijving" id="omschrijving">
+                    </div>
 
-                <div class="input-groep">
-                    <label class="input-label" for="omschrijving">omschrijving</label>
-                    <input type="omschrijving" name="omschrijving" id="omschrijving">
-                </div>
+                    <div class="input-groep">
+                        <label for="duur">duur</label>
+                        <input type="text" name="duur" id="duur">
+                    </div>
+                    <div class="input-groep">
+                        <label for="notitie">notitie</label>
+                        <input type="text" name="notitie" id="notitie">
+                    </div>
 
-                <div class="input-groep">
-                    <label class="input-label" for="duur">duur</label>
-                    <input type="duur" name="duur" id="duur">
-                </div>
-                <div class="input-groep">
-                    <label class="input-label" for="notitie">notitie</label>
-                    <input type="duur" name="notitie" id="notitie">
-                </div>
-
-                <div class="button-container">
-                    <button type="submit" class="input-button"> Aanmaken</button>
-                </div>
-    </div>
+                    <div class="button-container">
+                        <button type="submit" class="input-button"> Aanmaken</button>
+                    </div>
+            </div>
+        </div>
     </main>
 </body>
 

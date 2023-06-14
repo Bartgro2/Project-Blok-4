@@ -107,8 +107,9 @@ footer p {
     font-size: 14px;
 }
 
-.input-label {
+.input-groep label {
     display: block;
+    padding-bottom: 10px;
 }
 
 
@@ -144,4 +145,23 @@ select {
 
 main {
     padding-bottom: 10px;
+}
+
+.radio-buttons {
+    display: inline-flex;
+   
+    align-items: center;
+}
+
+.radio-buttons label{
+    align-self: center;
+}
+
+.radio-buttons h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.radio-buttons input[type="radio"]{
+    margin-left: 5px;
 }

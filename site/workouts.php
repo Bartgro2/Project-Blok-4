@@ -44,3 +44,4 @@ $workouts_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </body>
 
 </html>
+

@@ -23,10 +23,10 @@
 
                 <form action="verwerk-inloggen.php" method="post">
                     <div class="input-groep">
-                        <label class="input-label" for="email">Email</label>
+                        <label  for="email">Email</label>
                         <input type="email" name="email" id="email">
 
-                        <label class="input-label" for="wachtwoord">Wachtwoord</label>
+                        <label  for="wachtwoord">Wachtwoord</label>
                         <input type="password" name="wachtwoord" id="wachtwoord">
                     </div>
 

@@ -16,6 +16,7 @@ require 'database.php';
 </head>
 
 <body>
+    <?php require 'nav.php'; ?>
     <main>
         <div class="account-pagina">
             <div class="form-panel">
@@ -38,59 +39,59 @@ require 'database.php';
                         <hr>
                         <div class="radio-buttons">
                             <h2>Aanhef:</h2>
-                            <label for="radio">Man</label>
-                            <input type="radio" name="geslacht" id="Man">
-                            <label for="radio">Vrouw</label>
-                            <input type="radio" name="geslacht" id="Vrouw">
+                            <label for="man">Man</label>
+                            <input type="radio" name="geslacht" id="man">
+                            <label for="vrouw">Vrouw</label>
+                            <input type="radio" name="geslacht" id="vrouw">
                         </div>
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="voornaam">voornaam</label>
+                        <label for="voornaam">voornaam</label>
                         <input type="text" name="voornaam" id="voornaam">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="tussenvoegsels">tussenvoegsels</label>
+                        <label for="tussenvoegsels">tussenvoegsels</label>
                         <input type="text" name="tussenvoegsels" id="tussenvoegsels">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="achternaam">achternaam</label>
+                        <label for="achternaam">achternaam</label>
                         <input type="text" name="achternaam" id="achternaam">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="email">email</label>
+                        <label for="email">email</label>
                         <input type="email" name="email" id="email">
                     </div>
 
                     <div class="input-groep">
-                        <label class="input-label" for="telefoonnummer">telefoonnummer</label>
+                        <label for="telefoonnummer">telefoonnummer</label>
                         <input type="tel" name="telefoonnummer" id="telefoonnummer">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="mobielnummer">mobielnummer</label>
+                        <label for="mobielnummer">mobielnummer</label>
                         <input type="tel" name="mobielnummer" id="mobielnummer">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="straat">straat</label>
+                        <label for="straat">straat</label>
                         <input type="text" name="straat" id="straat">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="huisnummer">huisnnummer</label>
+                        <label for="huisnummer">huisnnummer</label>
                         <input type="text" name="huisnummer" id="huisnummer">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="plaats">plaats</label>
+                        <label for="plaats">plaats</label>
                         <input type="text" name="plaats" id="plaats">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="plaats">postcode</label>
+                        <label for="plaats">postcode</label>
                         <input type="text" name="postcode" id="postcode">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="land">land</label>
+                        <label for="land">land</label>
                         <input type="text" name="land" id="land">
                     </div>
                     <div class="input-groep">
-                        <label class="input-label" for="rol">rol</label>
+                        <label for="rol">rol</label>
                         <select name="rol" id="rol">
                             <option value="administrator">administrator</option>
                             <option value="manager">manager</option>
