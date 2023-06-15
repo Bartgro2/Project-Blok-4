@@ -18,6 +18,7 @@ $workouts_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </head>
 
 <body>
+    <?php require 'nav.php'; ?>
     <main>
         <div class="container-table">
         <table>
@@ -42,6 +43,7 @@ $workouts_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
         </table>
     </main>
     </div>
+    <?php require 'footer.php'; ?>
 </body>
 
 </html>

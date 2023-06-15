@@ -17,25 +17,71 @@ nav {
     font-size: 22px;
     justify-content: center;
     background-color: #1520A6;
-
+    position: relative;
+    min-width: 100px;
 }
 
 nav ul li {
-    display: inline-block;
+  
     list-style-type: none;
     padding: 10px;
     text-align: center;
 }
 
 nav ul li a {
+    display: block;
     text-decoration: none;
     color: black;
+    border: 1px solid transparent;
+}
+
+nav ul {
+    display: flex;
+    
 }
 
 nav ul li a:hover {
     color: grey;
     transition: .3s;
 }
+
+
+.dropdown:hover .submenu {
+    display: block;
+    position: relative;
+}
+
+.submenu{
+    display: none;
+    position: absolute; 
+}
+
+
+.submenu-ruimte{
+    padding-top: 15px; 
+    text-align: right; 
+}
+
+.submenu-ruimte li{
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
 
 /* dropdown voor uitloggen voor nav */
 
@@ -170,7 +216,7 @@ main {
 
 /*  workouts.php styling */
 
-div.container-table{
+div.container-table {
     display: flex;
     justify-content: center;
     padding: 30px;
@@ -178,24 +224,26 @@ div.container-table{
 
 table {
     width: 50%;
-    border: 1px solid black;
+    color: white;
 }
 
-td{
+th,td{
+    padding: 15px;
+}
+
+td {
     width: 23%;
     text-align: left;
 }
 
-thead{
-    background-color: black;
-    color: white;
-    
+thead {
+    background-color: black; 
+}
+tbody {
+    background-color: green;
 }
 
-tbody{
-   background-color: blue;
-   color: white;
-}
+
 
 /*  tweede table voor workouts.php   */
 
