@@ -43,7 +43,7 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email'])) {
                                     </div>
                                     <div class="form_group_user">
                                         <label for="email"><?php echo $userData['email'] ?></label>
-                                        <input type="email" id="email" name="email" placeholder="email-address ">
+                                        <input type="email" id="email" name="email" placeholder="email-address">
                                     </div>
                                     <div class="form_group_user">
                                         <label for="voornaam"><?php echo $userData['voornaam'] ?></label>

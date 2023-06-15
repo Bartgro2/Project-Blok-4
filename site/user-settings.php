@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['adminID'])) {
+if (isset($_SESSION['userID']) && isset($_SESSION['email'])) {
     require 'database.php';
 
     $sql = "SELECT * FROM users";
@@ -9,9 +9,11 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
 
     $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
+    <!DOCTYPE html>
+    <html lang="en">
 
     <head>
-        <title>Admin-dashboard</title>
+        <title>Gebruikers</title>
     </head>
 
     <body>
@@ -22,7 +24,7 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
             <section class="container_img">
                 <div class="container">
                     <div class="container_width">
-                    <div>
+                        <div>
                             <?php if (isset($_GET['error'])) { ?>
                                 <p class="error"><?php echo $_GET['error']; ?></p>
                             <?php } ?>
@@ -45,8 +47,6 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
                                         <th>voornaam</th>
                                         <th>achternaam</th>
                                         <th>address</th>
-                                        <th>geslacht</th>
-                                        <th>role</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -57,19 +57,9 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
                                             <td><?php echo $user['voornaam'] ?></td>
                                             <td><?php echo $user['achternaam'] ?></td>
                                             <td><?php echo $user['gebruikersnaam'] ?></td>
-                                            <td><?php echo $user['geslacht'] ?></td>
-                                            <?php if (isset($user['administratorID'])) { ?>
-                                                <td>admin</td>
-                                            <?php } ?>
-                                            <?php if (isset($user['managerID'])) { ?>
-                                                <td>manager</td>
-                                            <?php } ?>
-                                            <?php if (isset($user['regularID'])) { ?>
-                                                <td>regular</td>
-                                            <?php } ?>
                                             <td>
                                                 <a href="deleteUser.php?id=<?php echo $user['userID'] ?>" class="btn-delete">delete</a>
-                                                <a href="admin-userUpdate.php?id=<?php echo $user['userID'] ?>" class="btn-update">update</a>
+                                                <a href="userUpdate.php?id=<?php echo $user['userID'] ?>" class="btn-update">update</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -88,7 +78,7 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
     </html>
 
 <?php
-} else {
+}else {
     header("Location: index.php");
     exit();
 }

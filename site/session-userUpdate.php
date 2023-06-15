@@ -33,12 +33,12 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email'])) {
             $dateStamp = date("d-m-Y H:i:s", $timestamp);
 
             $sql_update_user = "UPDATE users 
-        SET voornaam='" . $_POST['voornaam'] . "', 
-        achternaam='" . $_POST['achternaam'] . "',
-        tussenvoegsels='" . $_POST['tussenvoegsels'] . "',
-        geslacht='" . $_POST['geslacht'] . "',
-        gebruikersnaam='" . $_POST['gebruikersnaam'] . "'
-        WHERE userID='" . $userID . "'";
+            SET voornaam='" . $_POST['voornaam'] . "', 
+            achternaam='" . $_POST['achternaam'] . "',
+            tussenvoegsels='" . $_POST['tussenvoegsels'] . "',
+            geslacht='" . $_POST['geslacht'] . "',
+            gebruikersnaam='" . $_POST['gebruikersnaam'] . "'
+            WHERE userID='" . $userID . "'";
             $update_check = mysqli_query($conn, $sql_update_user);
 
 
