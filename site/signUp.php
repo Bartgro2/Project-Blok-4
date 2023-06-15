@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="container_width">
                     <section class="form_align">
-                        <form action="session_signUp.php" method="post">
+                        <form action="session_signUp.php" method="POST" class="form_login_signup">
                             <h1 class="form_head">Maak een nieuwe gebruiker aan</h1>
                             <div>
                                 <?php if (isset($_GET['error'])) { ?>

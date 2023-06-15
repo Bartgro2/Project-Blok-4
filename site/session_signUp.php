@@ -136,7 +136,9 @@ if (
             header("Location: signUp.php?error=This email-address is already in use&$user_data");
             exit();
         } else {
-            $dateStamp = date("Y-m-d H:i:s");
+            $timestamp = time();
+            "Set timezone = " . date_default_timezone_set("Europe/Amsterdam");
+            $dateStamp = date("d-m-Y H:i:s", $timestamp);
 
             // Insert data into the regular table
             $sql_regular = "INSERT INTO regular(startDatum) VALUES('$dateStamp')";

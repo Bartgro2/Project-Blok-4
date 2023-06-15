@@ -37,8 +37,23 @@ if (isset($_POST['email']) && isset($_POST['wachtwoord'])) {
             $_SESSION['email'] = $user['email'];
             $_SESSION['voornaam'] = $user['voornaam'];
             $_SESSION['userID'] = $user['userID'];
-            header("Location: index.php");
-            exit();
+            $_SESSION['adminID'] = $user['administratorID'];
+            $_SESSION['managerID'] = $user['managerID'];
+            $_SESSION['regularID'] = $user['regularID'];
+            if (!is_null($user['administratorID'])) {
+                header("Location: admin-dashboard.php");
+                exit;
+            }
+    
+            if (!is_null($user['managerID'])) {
+                header("Location: manager-dashboard.php");
+                exit;
+            }
+    
+            if (!is_null($user['regularID'])) {
+                header("Location: index.php");
+                exit;
+            }
         } else {
             header("Location: login.php?error=Incorect Email-address or Password");
             exit();

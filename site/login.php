@@ -16,7 +16,7 @@
                     <section class="form_align">
                         <!-- action and method are atributes -->
                         <!-- action en method zijn atributen -->
-                        <form action="session_login.php" method="post">
+                        <form action="session_login.php" method="post" class="form_login_signup">
                             <div>
                                 <h2 class="form_head">Inloggen</h2>
                             </div>
