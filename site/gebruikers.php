@@ -60,14 +60,16 @@ if (isset($_GET['submit'])) {
 </head>
 
 <body>
+    <?php require 'nav.php' ?>
     <main>
         <div class="container-zoeken">
             <form action="gebruikers.php" class="zoeken" method="get">
-
+                
+            <input type="text" name="zoekveld" id="zoekveld">
                 <button class="button-zoeken" type="submit" name="submit">
                     zoeken
                 </button>
-                <input type="text" name="zoekveld" id="zoekveld">
+                
             </form>
         </div>
 
@@ -152,7 +154,7 @@ if (isset($_GET['submit'])) {
         </div>
 
     </main>
-
+    <?php require 'footer.php' ?>
 </body>
 
 </html>

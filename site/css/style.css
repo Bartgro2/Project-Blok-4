@@ -4,12 +4,19 @@
     box-sizing: border-box;
 }
 
+
 html,
 body {
     height: 100%;
 }
 
 /*  navigatie     */
+
+main{
+    height: 100%;
+    padding-bottom: 20px;
+}
+
 
 nav {
     display: flex;
@@ -22,7 +29,6 @@ nav {
 }
 
 nav ul li {
-  
     list-style-type: none;
     padding: 10px;
     text-align: center;
@@ -37,14 +43,12 @@ nav ul li a {
 
 nav ul {
     display: flex;
-    
 }
 
 nav ul li a:hover {
     color: grey;
     transition: .3s;
 }
-
 
 .dropdown:hover .submenu {
     display: block;
@@ -55,7 +59,6 @@ nav ul li a:hover {
     display: none;
     position: absolute; 
 }
-
 
 .submenu-ruimte{
     padding-top: 15px; 
@@ -70,23 +73,7 @@ nav ul li a:hover {
 }
 
 
-
-
-
-
-
-  
-
-  
-
-
-
-
-
-/* dropdown voor uitloggen voor nav */
-
 /* footer */
-
 
 footer {
     height: 50px;
@@ -101,7 +88,6 @@ footer p {
     text-align: center;
     font-size: 15px;
 }
-
 
 /*  form styling ( inloggen, registeren & nieuwe-workouts.php  */
 .account-pagina {
@@ -177,10 +163,6 @@ footer p {
 
 
 
-form {
-    max-width: 400px;
-}
-
 .input-groep [type="text"],
 input[type="tel"],
 input[type="email"],
@@ -190,8 +172,6 @@ select {
     height: 30px;
     margin: 0;
 }
-
-
 
 .radio-buttons {
     display: inline-flex;
@@ -212,7 +192,15 @@ select {
     margin-left: 5px;
 }
 
+form {
+    max-width: 400px;
+}
+
 /*  workouts.php styling */
+
+table{
+    color: white;
+}
 
 div.table-container {
     display: flex;
@@ -223,17 +211,11 @@ div.table-container {
     overflow-x: auto;
 }
 
-
 div.table-container2 {
     display: flex;
     gap: 30px;
     flex-direction: column;
     padding-top: 40px;
-}
-
-
-table{
-    color: white;
 }
 
 .table-workouts {
@@ -261,13 +243,11 @@ td {
 }
 
 thead {
-   
     background-color: black; 
 }
 tbody {
     background-color: green;
 }
-
 
 div.container-zoeken{
     display: flex;
