@@ -6,6 +6,30 @@ $sql = "SELECT * FROM gebruiker";
 $result = mysqli_query($conn, $sql);
 
 $gebruikers_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+$sql = "SELECT COUNT(id) as gebruikers From gebruiker";
+
+$result = mysqli_query($conn, $sql);
+
+$aantal_gebruikers = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+$sql = "SELECT COUNT(administrator.gebruiker_id) as admins FROM gebruiker INNER JOIN administrator ON administrator.gebruiker_id";
+
+$result = mysqli_query($conn, $sql);
+
+$aantal_administrators = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+$sql = "SELECT COUNT(manager.gebruiker_id) as managers FROM gebruiker INNER JOIN manager ON manager.gebruiker_id = gebruiker.id ";
+
+$result = mysqli_query($conn, $sql);
+
+$aantal_managers = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+$sql = "SELECT COUNT(regular.gebruiker_id) as regulars FROM gebruiker INNER JOIN regular on regular.gebruiker_id = gebruiker.id";
+
+$result = mysqli_query($conn, $sql);
+
+$aantal_regulars = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +48,7 @@ $gebruikers_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <table class="table-gebruikers">
                     <thead>
                         <tr>
-                            <th>id</th>   
+                            <th>id</th>
                             <th>workout_id</th>
                             <th>voornaam</th>
                             <th>tussenvoegsels</th>
@@ -69,12 +93,34 @@ $gebruikers_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 </table>
             </div>
             <div class="item">
-                <table>
-
+                <table class="table-gebruikers">
+                    <thead>
+                        <tr>
+                            <th>workouts</th>
+                            <th>admins</th>
+                            <th>managers</th>
+                            <th>regulars</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <?php foreach ($aantal_gebruikers as $gebruikers) : ?>
+                                <td><?php echo $gebruikers['gebruikers'] ?></td>
+                            <?php endforeach; ?>
+                            <?php foreach ($aantal_administrators as $administrator) : ?>
+                                <td><?php echo $administrator['admins'] ?> </td>
+                            <?php endforeach; ?>
+                            <?php foreach ($aantal_managers as $manager) : ?>
+                                <td><?php echo $manager['managers'] ?></td>
+                            <?php endforeach; ?>
+                            <?php foreach ($aantal_regulars as $regulars) : ?>
+                                <td><?php echo $regulars['regulars'] ?></td>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
-
 
     </main>
 
