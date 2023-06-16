@@ -31,6 +31,23 @@ $result = mysqli_query($conn, $sql);
 
 $aantal_regulars = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+if (isset($_GET['submit'])) {
+
+    $zoekterm = $_GET['zoekveld'];
+  
+    if (empty($zoekterm)) {
+      header("location: workouts.php");
+      exit;
+    }
+  
+    $sql = "SELECT * FROM workout where omschrijving LIKE '%$zoekterm%' or duur Like '%$zoekterm%' or notitie Like '%$zoekterm' or startdatum Like '%$zoekterm%'";
+    
+    
+  
+    $result = mysqli_query($conn, $sql);
+  
+    $gebruikers_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  }
 
 ?>
 <!DOCTYPE html>
