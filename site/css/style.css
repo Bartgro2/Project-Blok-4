@@ -269,4 +269,13 @@ tbody {
 }
 
 
+div.container-zoeken{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;   
+    width: 100%;
+}
 
+button.button-zoeken {
+    height: 25px;
+}

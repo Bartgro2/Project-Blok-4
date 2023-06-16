@@ -34,20 +34,20 @@ $aantal_regulars = mysqli_fetch_all($result, MYSQLI_ASSOC);
 if (isset($_GET['submit'])) {
 
     $zoekterm = $_GET['zoekveld'];
-  
+
     if (empty($zoekterm)) {
-      header("location: gebruikers.php");
-      exit;
+        header("location: gebruikers.php");
+        exit;
     }
-  
+
     $sql = "SELECT * FROM gebruiker where gebruikersnaam LIKE '%$zoekterm%' or email Like '%$zoekterm%' or geslacht Like '%$zoekterm' or voornaam Like '%$zoekterm%'";
-    
-    
-  
+
+
+
     $result = mysqli_query($conn, $sql);
-  
+
     $gebruikers_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,19 +61,18 @@ if (isset($_GET['submit'])) {
 
 <body>
     <main>
-        <div class="table-container2">
-
-
         <div class="container-zoeken">
-      <form action="gebruikers.php" class="zoeken" method="get">
+            <form action="gebruikers.php" class="zoeken" method="get">
 
-        <button class="button-zoeken" type="submit" name="submit">
-          zoeken
-        </button>
-        <input type="text" name="zoekveld" id="zoekveld">
-    </div>
-    </form>
+                <button class="button-zoeken" type="submit" name="submit">
+                    zoeken
+                </button>
+                <input type="text" name="zoekveld" id="zoekveld">
+            </form>
+        </div>
 
+
+        <div class="table-container2">
             <div class="item">
                 <table class="table-gebruikers">
                     <thead>
