@@ -191,9 +191,7 @@ select {
     margin: 0;
 }
 
-main {
-    padding-bottom: 10px;
-}
+
 
 .radio-buttons {
     display: inline-flex;
@@ -216,28 +214,54 @@ main {
 
 /*  workouts.php styling */
 
-div.container-table {
+div.table-container {
     display: flex;
-    justify-content: center;
-    padding: 30px;
-    
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    overflow-x: auto;
 }
 
-table {
-    width: 50%;
+
+div.table-container2 {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+
+table{
     color: white;
 }
 
-th,td{
+.table-workouts {
+    width: 50%;
+}
+
+.table-workouts th,td{
+   padding: 25px;
+}
+
+.table-gebruikers{
+    width: 100%;
+}
+
+.table-gebruikers td{
     padding: 15px;
 }
 
+.table-gebruikers th{
+    padding: 21.65px;
+}
+
 td {
-    width: 23%;
     text-align: center;
 }
 
 thead {
+   
     background-color: black; 
 }
 tbody {
@@ -246,6 +270,3 @@ tbody {
 
 
 
-/*  tweede table voor workouts.php   */
-
-/*  table styling voor gebruikers.php */

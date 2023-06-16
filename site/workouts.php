@@ -46,53 +46,60 @@ $aantal_regulars = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <body>
     <?php require 'nav.php'; ?>
     <main>
-        <div class="container-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>omschrijving</th>
-                        <th>duur</th>
-                        <th>notitie</th>
-                        <th>startdatum</th>
-                    </tr>
-                </thead>
-                <?php foreach ($workouts_info as $workout_info) : ?>
+        <div class="table-container">
+            <div class="item">
+                <table class="table-workouts">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>omschrijving</th>
+                            <th>duur</th>
+                            <th>notitie</th>
+                            <th>startdatum</th>
+                        </tr>
+                    </thead>
+                    <?php foreach ($workouts_info as $workout_info) : ?>
+                        <tbody>
+                            <tr>
+                                <td><?php echo $workout_info['id'] ?></td>
+                                <td><?php echo $workout_info['omschrijving'] ?></td>
+                                <td><?php echo $workout_info['duur'] ?></td>
+                                <td><?php echo $workout_info['notitie'] ?></td>
+                                <td><?php echo $workout_info['startdatum'] ?></td>
+                            </tr>
+                        </tbody>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+            <div class="item">
+                <table class="table-workouts">
+                    <thead>
+                        <tr>
+                            <th>workouts</th>
+                            <th>admins</th>
+                            <th>managers</th>
+                            <th>regulars</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <td><?php echo $workout_info['id'] ?></td>
-                        <td><?php echo $workout_info['omschrijving'] ?></td>
-                        <td><?php echo $workout_info['duur'] ?></td>
-                        <td><?php echo $workout_info['notitie'] ?></td>
-                        <td><?php echo $workout_info['startdatum'] ?></td>
+                        <tr>
+                            <?php foreach ($aantal_workouts as $workout) : ?>
+                                <td><?php echo $workout['workouts'] ?></td>
+                            <?php endforeach; ?>
+                            <?php foreach ($aantal_administrators as $administrator) : ?>
+                                <td><?php echo $administrator['admins'] ?> </td>
+                            <?php endforeach; ?>
+                            <?php foreach ($aantal_managers as $manager) : ?>
+                                <td><?php echo $manager['managers'] ?></td>
+                            <?php endforeach; ?>
+                            <?php foreach ($aantal_regulars as $regulars) : ?>
+                                <td><?php echo $regulars['regulars'] ?></td>
+                            <?php endforeach; ?>
+                        </tr>
                     </tbody>
-                <?php endforeach; ?>
-            </table>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>workouts</th>
-                        <th>admins</th>
-                        <th>managers</th>
-                        <th>regulars</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($aantal_workouts as $workout) : ?>
-                        <td><?php echo $workout['workouts'] ?></td>
-                    <?php endforeach; ?>
-                    <?php foreach ($aantal_administrators as $administrator) : ?>
-                        <td><?php echo $administrator['admins'] ?> </td>
-                    <?php endforeach; ?>
-                    <?php foreach ($aantal_managers as $manager) : ?>
-                        <td><?php echo $manager['managers'] ?></td>
-                    <?php endforeach; ?>
-                    <?php foreach($aantal_regulars as $regulars): ?>
-                    <td><?php echo $regulars['regulars'] ?></td>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+                </table>
     </main>
+    </div>
     </div>
     <?php require 'footer.php'; ?>
 </body>
