@@ -1,6 +1,12 @@
 <?php
 require 'database.php';
 
+session_start();
+if (!isset($_SESSION['adminid'])) {
+    header("location: inloggen.php");
+    exit();
+}
+
 $sql = "SELECT * FROM gebruiker";
 
 $result = mysqli_query($conn, $sql);

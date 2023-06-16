@@ -1,6 +1,9 @@
 <?php require 'database.php';
 
-
+if (!is_array($gebruiker)) {
+    header("location: inloggen.php");
+    exit();
+}
 
 if (!empty($_POST['omschrijving'])) {
 

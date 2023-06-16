@@ -1,6 +1,9 @@
 <?php
 
 require 'database.php';
+
+
+
 if (!empty($_POST['gebruikersnaam'])) {
 
 

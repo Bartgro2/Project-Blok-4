@@ -1,6 +1,11 @@
 <?php
 require 'database.php';
 
+session_start();
+
+
+
+
 $sql = "SELECT *  FROM workout";
 
 $result = mysqli_query($conn, $sql);
