@@ -1,6 +1,10 @@
 <?php require 'database.php';
 session_start();
 
+if (!isset($_SESSION['regularid'])) {
+    header("location: inloggen.php");
+    exit();
+}
 
 ?>
 

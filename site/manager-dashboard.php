@@ -1,7 +1,10 @@
 <?php require 'database.php';
 session_start();
 
-
+if (!isset($_SESSION['managerid'])) {
+    header("location: inloggen.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
