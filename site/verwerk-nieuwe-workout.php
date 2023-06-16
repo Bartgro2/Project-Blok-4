@@ -1,6 +1,8 @@
 <?php require 'database.php';
 
-if (!is_array($gebruiker)) {
+session_start();
+
+if (!isset($_SESSION['adminid'])) {
     header("location: inloggen.php");
     exit();
 }

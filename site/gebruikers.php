@@ -70,12 +70,12 @@ if (isset($_GET['submit'])) {
     <main>
         <div class="container-zoeken">
             <form action="gebruikers.php" class="zoeken" method="get">
-                
-            <input type="text" name="zoekveld" id="zoekveld">
+
+                <input type="text" name="zoekveld" id="zoekveld">
                 <button class="button-zoeken" type="submit" name="submit">
                     zoeken
                 </button>
-                
+
             </form>
         </div>
 
@@ -129,34 +129,36 @@ if (isset($_GET['submit'])) {
                     <?php endforeach; ?>
                 </table>
             </div>
-            <div class="item">
-                <table class="table-gebruikers">
-                    <thead>
-                        <tr>
-                            <th>gebruikers</th>
-                            <th>admins</th>
-                            <th>managers</th>
-                            <th>regulars</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <?php foreach ($aantal_gebruikers as $gebruikers) : ?>
-                                <td><?php echo $gebruikers['gebruikers'] ?></td>
-                            <?php endforeach; ?>
-                            <?php foreach ($aantal_administrators as $administrator) : ?>
-                                <td><?php echo $administrator['admins'] ?> </td>
-                            <?php endforeach; ?>
-                            <?php foreach ($aantal_managers as $manager) : ?>
-                                <td><?php echo $manager['managers'] ?></td>
-                            <?php endforeach; ?>
-                            <?php foreach ($aantal_regulars as $regulars) : ?>
-                                <td><?php echo $regulars['regulars'] ?></td>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+           
+                   
+                <div class="item">
+                    <table class="table-gebruikers">
+                        <thead>
+                            <tr>
+                                <th>gebruikers</th>
+                                <th>admins</th>
+                                <th>managers</th>
+                                <th>regulars</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <?php foreach ($aantal_gebruikers as $gebruikers) : ?>
+                                    <td><?php echo $gebruikers['gebruikers'] ?></td>
+                                <?php endforeach; ?>
+                                <?php foreach ($aantal_administrators as $administrator) : ?>
+                                    <td><?php echo $administrator['admins'] ?> </td>
+                                <?php endforeach; ?>
+                                <?php foreach ($aantal_managers as $manager) : ?>
+                                    <td><?php echo $manager['managers'] ?></td>
+                                <?php endforeach; ?>
+                                <?php foreach ($aantal_regulars as $regulars) : ?>
+                                    <td><?php echo $regulars['regulars'] ?></td>
+                                <?php endforeach; ?>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
         </div>
 
     </main>

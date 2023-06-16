@@ -2,7 +2,11 @@
 
 require 'database.php';
 
-
+session_start();
+if (!isset($_SESSION['adminid'])) {
+    header("location: inloggen.php");
+    exit();
+}
 
 if (!empty($_POST['gebruikersnaam'])) {
 
@@ -25,19 +29,22 @@ if (!empty($_POST['gebruikersnaam'])) {
     $land             = $_POST['land'];
     $rol              = $_POST['rol'];
 
-    
 
-    
 
-    
+
+
+
+
     // wachtwoord hashen
- 
+
     $hashed_password = password_hash($wachtwoord, PASSWORD_DEFAULT);
 
 
 
     $sql =  "INSERT INTO gebruiker(gebruikersnaam, wachtwoord, geslacht, voornaam, tussenvoegsels, achternaam, email, telefoonnummer, mobielnummer, straat, huisnummer, plaats , postcode, land) 
     VALUES ('$gebruikersnaam','$hashed_password','$geslachten','$voornaam','$tussenvoegsels','$achternaam','$email','$telefoonnummer','$mobielnummer','$straat','$huisnummer','$plaats','$postcode','$land')";
+
+   
 
     if ($conn->query($sql) === TRUE) {
 

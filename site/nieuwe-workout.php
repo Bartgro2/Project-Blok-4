@@ -1,7 +1,12 @@
 <?php
 require 'database.php';
 
+session_start();
 
+if (is_null($_SESSION['adminid'] || $_SESSION['managerid'])) {
+    header("location: inloggen.php");
+    exit();
+}
 
 
 ?>

@@ -93,6 +93,8 @@ if (isset($_GET['submit'])) {
                     <?php endforeach; ?>
                 </table>
             </div>
+             
+            <?php if (!isset($_SESSION['regularid'])) { ?>
             <div class="item">
                 <table class="table-workouts">
                     <thead>
@@ -122,6 +124,7 @@ if (isset($_GET['submit'])) {
                 </table>
     </main>
     </div>
+    <?php } ?>
     </div>
     <?php require 'footer.php'; ?>
 </body>
