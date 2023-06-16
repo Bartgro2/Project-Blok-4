@@ -40,7 +40,9 @@ if (isset($_GET['submit'])) {
       exit;
     }
   
-    $sql = "SELECT * FROM gebruiker where id LIKE '%$zoekterm%'";
+    $sql = "SELECT * FROM gebruiker where gebruikersnaam LIKE '%$zoekterm%' or email Like '%$zoekterm%' or geslacht Like '%$zoekterm' or voornaam Like '%$zoekterm%'";
+    
+    
   
     $result = mysqli_query($conn, $sql);
   
