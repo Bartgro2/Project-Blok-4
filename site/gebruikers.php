@@ -13,7 +13,7 @@ $result = mysqli_query($conn, $sql);
 
 $aantal_gebruikers = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-$sql = "SELECT COUNT(administrator.gebruiker_id) as admins FROM gebruiker INNER JOIN administrator ON administrator.gebruiker_id";
+$sql = "SELECT COUNT(administrator.gebruiker_id) as admins FROM gebruiker INNER JOIN administrator ON administrator.gebruiker_id = gebruiker.id";
 
 $result = mysqli_query($conn, $sql);
 
@@ -30,6 +30,22 @@ $sql = "SELECT COUNT(regular.gebruiker_id) as regulars FROM gebruiker INNER JOIN
 $result = mysqli_query($conn, $sql);
 
 $aantal_regulars = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+if (isset($_GET['submit'])) {
+
+    $zoekterm = $_GET['zoekveld'];
+  
+    if (empty($zoekterm)) {
+      header("location: gebruikers.php");
+      exit;
+    }
+  
+    $sql = "SELECT * FROM gebruiker where id LIKE '%$zoekterm%'";
+  
+    $result = mysqli_query($conn, $sql);
+  
+    $gebruikers_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +60,18 @@ $aantal_regulars = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <body>
     <main>
         <div class="table-container2">
+
+
+        <div class="container-zoeken">
+      <form action="gebruikers.php" class="zoeken" method="get">
+
+        <button class="button-zoeken" type="submit" name="submit">
+          zoeken
+        </button>
+        <input type="text" name="zoekveld" id="zoekveld">
+    </div>
+    </form>
+
             <div class="item">
                 <table class="table-gebruikers">
                     <thead>
@@ -96,7 +124,7 @@ $aantal_regulars = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <table class="table-gebruikers">
                     <thead>
                         <tr>
-                            <th>workouts</th>
+                            <th>gebruikers</th>
                             <th>admins</th>
                             <th>managers</th>
                             <th>regulars</th>
