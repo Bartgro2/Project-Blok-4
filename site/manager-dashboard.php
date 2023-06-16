@@ -86,7 +86,7 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
     </html>
 
 <?php
-}else {
+} else {
     header("Location: index.php");
     exit();
 }

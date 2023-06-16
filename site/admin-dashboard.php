@@ -47,6 +47,8 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
                                         <th>address</th>
                                         <th>geslacht</th>
                                         <th>role</th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -69,8 +71,8 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
                                             <?php } ?>
                                             <td>
                                                 <a href="deleteUser.php?id=<?php echo $user['userID'] ?>" class="btn-delete">delete</a>
-                                                <a href="admin-userUpdate.php?id=<?php echo $user['userID'] ?>" class="btn-update">update</a>
                                             </td>
+                                                <td><a href="admin-userUpdate.php?id=<?php echo $user['userID'] ?>" class="btn-update">update</a></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

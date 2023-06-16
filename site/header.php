@@ -8,8 +8,8 @@
     <link rel="icon" type="image/x-icon" href="img/logoGimp.png">
     <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/js/javascript.js" async></script>
     <script src="/js/drop.js" async></script>
+    <script defer src="/js/javascript.js"></script>
 </head>
 
 <body>

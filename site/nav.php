@@ -3,8 +3,20 @@
             <li>
                 <div class="icon">
                     <a href="index.php"><i class="fa fa-home"></i>Home</a>
-                    <a href="">Services</a>
-                    <a href="">About us</a>
+                    <a href="">Diensten</a>
+                    <a href="">Over ons</a>
+                    <button data-modal-target="#modal" class="modal-button">Over dit project</button>
+                    <div class="modal" id="modal">
+                        <div class="modal-header">
+                            <div class="title">Project blok 4</div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            Het project bestaat uit 2 projectweken.
+                            Er wordt iedere dag aan het project gewerkt, tot het gewenste resultaat behaald is.
+                        </div>
+                    </div>
+                    <div id="overlay"></div>
                 </div>
             </li>
         </ul>

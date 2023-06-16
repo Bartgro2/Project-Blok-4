@@ -13,6 +13,7 @@ session_start();
     include('header.php');
     ?>
     <section id="content" class="page_height">
+        
     </section>
     <?php
     include('footer.php');
