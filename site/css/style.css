@@ -442,7 +442,7 @@ nav ul li a:hover {
 /* #endregion login pagina + signup pagina */
 
 /* #region users.php */
-.container_scroll{
+/* .container_scroll{
     display: flex;
     flex-direction: column;
 
@@ -492,7 +492,7 @@ nav ul li a:hover {
 .container_scroll table td input{
     padding: 2px;
     margin: 5px;
-}
+} */
 
 .btn-delete{
     font-size: 16px;
@@ -685,5 +685,303 @@ nav ul li a:hover {
   } 
 
 /* #region manager-dashboard.php */
+@media only screen and (max-width: 768px) {
+    .table__header {
+        width: 100%;
+        height: 20%;
+        background-color: #fff4;
+        padding: .8rem 1rem;
+        margin: 20px 0;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .table__header .input-group{
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+    }
+    .table__header .input-group form{
+        width:90%;
+        height: 100%;
+        background-color: #fff5;
+        padding: 0 .8rem;
+        border-radius: 2rem;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: .2s;
+    }
+
+    .table__header .input-group form select{
+        width:90%;
+        height: 100%;
+        background-color: #fff5;
+        padding: 0 .8rem;
+        border-radius: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: .2s;
+    }
+
+    .table__header .input-group form:hover {
+        width: 100%;
+        background-color: rgba(255, 196, 0, 0.533);
+        box-shadow: 0 .1rem .4rem #0002;
+    }
+
+    .table__header .input-group form input {
+        width: 40%;
+        padding: 0 .5rem 0 .3rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .table__header .display-group {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .table__header .display-group .display-group-child{
+        width:60%;
+        height: 100%;
+        background-color: #fff5;
+        border-radius: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .table__header .display-group .display-group-child p{
+        font-weight: bold;
+        font-style: italic;
+        font-variant: small-caps;
+    }
+
+    .table__body {
+        width: 100%;
+        min-height: 70vh;
+        max-height: calc(89% - 1.6rem);
+        background-color: rgba(201, 201, 201, 0.733);
+
+        margin: .8rem auto;
+        border-radius: .6rem;
+
+        overflow: auto;
+        overflow: overlay;
+    }
+
+    .table__body::-webkit-scrollbar{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .table__body::-webkit-scrollbar-thumb{
+        border-radius: .5rem;
+        background-color: #0004;
+        visibility: hidden;
+    }
+
+    .table__body:hover::-webkit-scrollbar-thumb{ 
+        visibility: visible;
+    }
+
+    .table__body table {
+        width: 100%;
+    }
+
+    .table__body table, th, td {
+        border-collapse: collapse;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .table__body thead th {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #ffbb00fe;
+        /* cursor: pointer; */
+        text-transform: capitalize;
+    }
+
+    .table__body tbody tr:nth-child(even) {
+        background-color: #0000002d;
+    }
+
+    .table__body tbody tr {
+        --delay: .1s;
+        transition: .5s ease-in-out var(--delay), background-color 0s;
+    }
+
+    .table__body tbody tr:hover {
+        background-color: #fff6 !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .table__header {
+        width: 100%;
+        height: 10%;
+        background-color: #fff4;
+        padding: .8rem 1rem;
+        margin: 20px 0;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .table__header .input-group{
+        width: 60%;
+        height: 100%;
+    }
+    .table__header .input-group form{
+        width:80%;
+        height: 100%;
+        background-color: #fff5;
+        padding: 0 .8rem;
+        border-radius: 2rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        transition: .2s;
+    }
+    
+    .table__header .input-group form select{
+        width:100%;
+        height: 100%;
+        background-color: #fff5;
+        padding: 0 .8rem;
+        border-radius: 2rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        transition: .2s;
+    }
+    
+    .table__header .input-group form:hover {
+        width: 100%;
+        background-color: rgba(255, 196, 0, 0.533);
+        box-shadow: 0 .1rem .4rem #0002;
+    }
+    
+    .table__header .input-group input {
+        width: 100%;
+        padding: 0 .5rem 0 .3rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .table__header .display-group {
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .table__header .display-group .display-group-child{
+        width:100%;
+        height: 100%;
+        background-color: #fff5;
+        border-radius: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .table__header .display-group .display-group-child p{
+        font-weight: bold;
+        font-style: italic;
+        font-variant: small-caps;
+    }
+    
+    .table__body {
+        width: 100%;
+        min-height: 80vh;
+        max-height: calc(89% - 1.6rem);
+        background-color: rgba(201, 201, 201, 0.733);
+    
+        margin: .8rem auto;
+        border-radius: .6rem;
+    
+        overflow: auto;
+        overflow: overlay;
+    }
+    
+    .table__body::-webkit-scrollbar{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    
+    .table__body::-webkit-scrollbar-thumb{
+        border-radius: .5rem;
+        background-color: #0004;
+        visibility: hidden;
+    }
+    
+    .table__body:hover::-webkit-scrollbar-thumb{ 
+        visibility: visible;
+    }
+    
+    .table__body table {
+        width: 100%;
+    }
+    
+    .table__body table, th, td {
+        border-collapse: collapse;
+        padding: 1rem;
+        text-align: left;
+    }
+    
+    .table__body thead th {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #ffbb00fe;
+        /* cursor: pointer; */
+        text-transform: capitalize;
+    }
+    
+    .table__body tbody tr:nth-child(even) {
+        background-color: #0000002d;
+    }
+    
+    .table__body tbody tr {
+        --delay: .1s;
+        transition: .5s ease-in-out var(--delay), background-color 0s;
+    }
+    
+    .table__body tbody tr:hover {
+        background-color: #fff6 !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .table__body td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}
 /* #endregion manager-dashboard.php */

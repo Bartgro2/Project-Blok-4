@@ -8,9 +8,19 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
     $result = mysqli_query($conn, $sql);
 
     $adresses = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    $sqlCount = "SELECT COUNT(adresID) AS adresCount FROM adres";
+
+    $resultCount = mysqli_query($conn, $sqlCount);
+
+    $adresCountsql = mysqli_fetch_assoc($resultCount);
+
+    $sqlCount = "SELECT COUNT(userID) AS userCount, COUNT(administratorID) AS adminCount, COUNT(managerID) AS managerCount, COUNT(regularID) AS regularCount FROM users";
+
+    $resultCount = mysqli_query($conn, $sqlCount);
+
+    $userCountsql = mysqli_fetch_assoc($resultCount);
 ?>
-    <!DOCTYPE html>
-    <html lang="en">
 
     <head>
         <title>Gebruikers</title>
@@ -38,26 +48,37 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
                                 </div>
                             <?php } ?>
                         </div>
-
                         <section class="container_scroll">
                             <section class="table__header">
-                                <form action="manager-dashboard.php" method="POST">
-                                    <label for="sort">Sort By:</label>
-                                    <select name="sort" id="sort">
-                                        <option value="alfabetisch_a-z">Alfabetisch plaats a-z</option>
-                                        <option value="alfabetisch_z-a">Alfabetisch plaats z-a</option>
-                                        <option value="toevoegdatum_laag-hoog">Toevoegdatum laag-hoog</option>
-                                        <option value="toevoegdatum_hoog-laag">Toevoegdatum hoog-laag</option>
-                                    </select>
-                                    <input id="submit-sort" type="submit" name="submit-sort" value="Sort">
-                                </form>
-                                <form action="manager-dashboard.php" method="POST">
-                                    <div class="input-group">
-                                        <label for="search">Zoek:</label>
-                                        <input id="search" name="search" type="search" placeholder="Type here">
-                                        <input id="submit-search" type="submit" name="submit-search" value="Search">
+                                <div class="input-group">
+                                    <form action="manager-dashboard.php" method="POST">
+                                        <label for="sort"></label>
+                                        <select name="sort" id="sort">
+                                            <option value="alfabetisch_a-z">Alfabetisch plaats a-z</option>
+                                            <option value="alfabetisch_z-a">Alfabetisch plaats z-a</option>
+                                            <option value="toevoegdatum_laag-hoog">Toevoegdatum laag-hoog</option>
+                                            <option value="toevoegdatum_hoog-laag">Toevoegdatum hoog-laag</option>
+                                        </select>
+                                        <input id="submit-sort" type="submit" name="submit-sort" value="Sort">
+                                    </form>
+                                </div>
+                                <div class="input-group">
+                                    <form action="manager-dashboard.php" method="POST">
+                                        <label for="search"></label>
+                                        <input id="search" name="search" type="search" placeholder="Type hier">
+                                        <input id="submit-search" type="submit" name="submit-search" value="Zoek">
+                                    </form>
+                                </div>
+                                <div class="display-group">
+                                    <div class="display-group-child">
+                                        <p>aantal adressen: <?php echo $adresCountsql['adresCount'] ?></p>
+                                        <p>aantal administrators: <?php echo $userCountsql['adminCount'] ?></p>
                                     </div>
-                                </form>
+                                    <div class="display-group-child">
+                                        <p>aantal managers: <?php echo $userCountsql['managerCount'] ?></p>
+                                        <p>aantal regulars: <?php echo $userCountsql['regularCount'] ?></p>
+                                    </div>
+                                </div>
                             </section>
                             <section class="table__body">
                                 <table>

@@ -8,6 +8,12 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
     $result = mysqli_query($conn, $sql);
 
     $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    $sqlCount = "SELECT COUNT(userID) AS userCount, COUNT(administratorID) AS adminCount, COUNT(managerID) AS managerCount, COUNT(regularID) AS regularCount FROM users";
+
+    $resultCount = mysqli_query($conn, $sqlCount);
+
+    $userCountsql = mysqli_fetch_assoc($resultCount);
 ?>
 
     <head>
@@ -36,26 +42,37 @@ if (isset($_SESSION['userID']) && isset($_SESSION['email']) && isset($_SESSION['
                                 </div>
                             <?php } ?>
                         </div>
-
                         <section class="container_scroll">
                             <section class="table__header">
-                                <form action="admin-dashboard.php" method="POST">
-                                    <label for="sort">Sort By:</label>
-                                    <select name="sort" id="sort">
-                                        <option value="alfabetisch_voornaam_a-z">Alfabetisch voornaam a-z</option>
-                                        <option value="alfabetisch_voornaam_z-a">Alfabetisch voornaam z-a</option>
-                                        <option value="alfabetisch_achternaam_a-z">Alfabetisch achternaam a-z</option>
-                                        <option value="alfabetisch_achternaam_z-a">Alfabetisch achternaam z-a</option>
-                                    </select>
-                                    <input id="submit-sort" type="submit" name="submit-sort" value="Sort">
-                                </form>
-                                <form action="admin-dashboard.php" method="POST">
-                                    <div class="input-group">
-                                        <label for="search">Zoek:</label>
-                                        <input id="search" name="search" type="search" placeholder="Type here">
-                                        <input id="submit-search" type="submit" name="submit-search" value="Search">
+                                <div class="input-group">
+                                    <form action="admin-dashboard.php" method="POST">
+                                        <label for="sort"></label>
+                                        <select name="sort" id="sort">
+                                            <option value="alfabetisch_voornaam_a-z">Alfabetisch voornaam a-z</option>
+                                            <option value="alfabetisch_voornaam_z-a">Alfabetisch voornaam z-a</option>
+                                            <option value="alfabetisch_achternaam_a-z">Alfabetisch achternaam a-z</option>
+                                            <option value="alfabetisch_achternaam_z-a">Alfabetisch achternaam z-a</option>
+                                        </select>
+                                        <input id="submit-sort" type="submit" name="submit-sort" value="Sort">
+                                    </form>
+                                </div>
+                                <div class="input-group">
+                                    <form action="admin-dashboard.php" method="POST">
+                                        <label for="search"></label>
+                                        <input id="search" name="search" type="search" placeholder="Type hier">
+                                        <input id="submit-search" type="submit" name="submit-search" value="Zoek">
+                                    </form>
+                                </div>
+                                <div class="display-group">
+                                    <div class="display-group-child">
+                                        <p>aantal gebruikers: <?php echo $userCountsql['userCount'] ?></p>
+                                        <p>aantal administrators: <?php echo $userCountsql['adminCount'] ?></p>
                                     </div>
-                                </form>
+                                    <div class="display-group-child">
+                                        <p>aantal managers: <?php echo $userCountsql['managerCount'] ?></p>
+                                        <p>aantal regulars: <?php echo $userCountsql['regularCount'] ?></p>
+                                    </div>
+                                </div>
                             </section>
                             <section class="table__body">
                                 <table>

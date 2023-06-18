@@ -6,10 +6,8 @@ if (
     isset($_POST['email'])
     && isset($_POST['voornaam'])
     && isset($_POST['achternaam'])
-    && isset($_POST['tussenvoegsels'])
     && isset($_POST['geslacht'])
     && isset($_POST['gebruikersnaam'])
-    && isset($_POST['omschrijving'])
     && isset($_POST['straat'])
     && isset($_POST['huisnummer'])
     && isset($_POST['postcode'])
@@ -17,7 +15,6 @@ if (
     && isset($_POST['land'])
     && isset($_POST['telefoonnummer'])
     && isset($_POST['mobielnummer'])
-    && isset($_POST['notitie'])
     && isset($_POST['wachtwoord'])
     && isset($_POST['check_wachtwoord'])
 ) {
@@ -74,17 +71,11 @@ if (
     } else if (empty($lastname)) {
         header("Location: signUp.php?error=achternaam is required&$user_data");
         exit();
-    } else if (empty($preposition)) {
-        header("Location: signUp.php?error=tussenvoegsels is required&$user_data");
-        exit();
     } else if (empty($gender)) {
         header("Location: signUp.php?error=geslacht is required&$user_data");
         exit();
     } else if (empty($username)) {
         header("Location: signUp.php?error=gebruikersnaam is required&$user_data");
-        exit();
-    } else if (empty($description)) {
-        header("Location: signUp.php?error=omschrijving is required&$user_data");
         exit();
     } else if (empty($street)) {
         header("Location: signUp.php?error=straat is required&$user_data");
@@ -106,9 +97,6 @@ if (
         exit();
     } else if (empty($mobilePhonenumber)) {
         header("Location: signUp.php?error=mobielnummer is required&$user_data");
-        exit();
-    } else if (empty($note)) {
-        header("Location: signUp.php?error=notitie is required&$user_data");
         exit();
     } else if (empty($pass)) {
         header("Location: signUp.php?error=Password is required&$user_data");

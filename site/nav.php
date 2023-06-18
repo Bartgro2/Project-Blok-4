@@ -28,7 +28,6 @@
                 <div id="myDropdown" class="dropdown-content">
                     <?php
                     if (isset($_SESSION['adminID'])) { ?>
-                        <a href="users.php">gebruikers</a>
                         <a href="admin-dashboard.php">dashboard</a>
                     <?php
                     } else if (isset($_SESSION['managerID'])) { ?>
