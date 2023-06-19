@@ -39,20 +39,18 @@ $aantal_regulars = mysqli_fetch_all($result, MYSQLI_ASSOC);
 if (isset($_GET['submit'])) {
 
     $zoekterm = $_GET['zoekveld'];
-  
+
     if (empty($zoekterm)) {
-      header("location: workouts.php");
-      exit;
+        header("location: workouts.php");
+        exit;
     }
-  
+
     $sql = "SELECT * FROM workout where omschrijving LIKE '%$zoekterm%' or duur Like '%$zoekterm%' or notitie Like '%$zoekterm' or startdatum Like '%$zoekterm%'";
-    
-    
-  
+
     $result = mysqli_query($conn, $sql);
-  
-    $gebruikers_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  }
+
+    $workouts_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
 
 ?>
 <!DOCTYPE html>
@@ -68,6 +66,18 @@ if (isset($_GET['submit'])) {
 <body>
     <?php require 'nav.php'; ?>
     <main>
+
+        <div class="container-zoeken">
+            <form action="workouts.php" class="zoeken" method="get">
+
+                <input type="text" name="zoekveld" id="zoekveld">
+                <button class="button-zoeken" type="submit" name="submit">
+                    zoeken
+                </button>
+
+            </form>
+        </div>
+
         <div class="table-container">
             <div class="item">
                 <table class="table-workouts">
@@ -93,40 +103,40 @@ if (isset($_GET['submit'])) {
                     <?php endforeach; ?>
                 </table>
             </div>
-             
+
             <?php if (!isset($_SESSION['regularid'])) { ?>
-            <div class="item">
-                <table class="table-workouts">
-                    <thead>
-                        <tr>
-                            <th>workouts</th>
-                            <th>admins</th>
-                            <th>managers</th>
-                            <th>regulars</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <?php foreach ($aantal_workouts as $workout) : ?>
-                                <td><?php echo $workout['workouts'] ?></td>
-                            <?php endforeach; ?>
-                            <?php foreach ($aantal_administrators as $administrator) : ?>
-                                <td><?php echo $administrator['admins'] ?> </td>
-                            <?php endforeach; ?>
-                            <?php foreach ($aantal_managers as $manager) : ?>
-                                <td><?php echo $manager['managers'] ?></td>
-                            <?php endforeach; ?>
-                            <?php foreach ($aantal_regulars as $regulars) : ?>
-                                <td><?php echo $regulars['regulars'] ?></td>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="item">
+                    <table class="table-workouts">
+                        <thead>
+                            <tr>
+                                <th>workouts</th>
+                                <th>admins</th>
+                                <th>managers</th>
+                                <th>regulars</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <?php foreach ($aantal_workouts as $workout) : ?>
+                                    <td><?php echo $workout['workouts'] ?></td>
+                                <?php endforeach; ?>
+                                <?php foreach ($aantal_administrators as $administrator) : ?>
+                                    <td><?php echo $administrator['admins'] ?> </td>
+                                <?php endforeach; ?>
+                                <?php foreach ($aantal_managers as $manager) : ?>
+                                    <td><?php echo $manager['managers'] ?></td>
+                                <?php endforeach; ?>
+                                <?php foreach ($aantal_regulars as $regulars) : ?>
+                                    <td><?php echo $regulars['regulars'] ?></td>
+                                <?php endforeach; ?>
+                            </tr>
+                        </tbody>
+                    </table>
     </main>
     </div>
-    <?php } ?>
-    </div>
-    <?php require 'footer.php'; ?>
+<?php } ?>
+</div>
+<?php require 'footer.php'; ?>
 </body>
 
 </html>
