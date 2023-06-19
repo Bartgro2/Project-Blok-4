@@ -3,13 +3,13 @@ function browserGreeting() {
     let greeting = "";
   
     if (language === "en") {
-      greeting = "Hello";
+      greeting = "Hello,";
     } else if (language === "fr") {
-      greeting = "Bonjour";
+      greeting = "Bonjour,";
     } else if (language === "es") {
-      greeting = "¡Hola";
+      greeting = "¡Hola,";
     } else {
-      greeting = "welkom";
+      greeting = "welkom,";
     }
   
     const greetingElement = document.getElementById("greeting");

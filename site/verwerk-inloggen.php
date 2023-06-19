@@ -6,30 +6,30 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-$email    = $_POST['email'];
+$gebruikersnaam = $_POST['gebruikersnaam'];
 $password = $_POST['wachtwoord'];
 
 require 'database.php';
 
-$sql = "SELECT * FROM gebruiker WHERE email = '$email'";
+$sql = "SELECT * FROM gebruiker WHERE gebruikersnaam = '$gebruikersnaam'";
 
 $result = mysqli_query($conn, $sql);
 
 $gebruiker = mysqli_fetch_assoc($result);
 
-$sql = "SELECT * FROM gebruiker inner join administrator on administrator.gebruiker_id = gebruiker.id where email = '$email'";
+$sql = "SELECT * FROM gebruiker inner join administrator on administrator.gebruiker_id = gebruiker.id where gebruikersnaam = '$gebruikersnaam'";
 
 $result = mysqli_query($conn, $sql);
 
 $administrator = mysqli_fetch_assoc($result);
 
-$sql = "SELECT * FROM gebruiker inner join regular on regular.gebruiker_id = gebruiker.id where email = '$email'";
+$sql = "SELECT * FROM gebruiker inner join regular on regular.gebruiker_id = gebruiker.id where gebruikersnaam = '$gebruikersnaam'";
 
 $result = mysqli_query($conn, $sql);
 
 $regular = mysqli_fetch_assoc($result);
 
-$sql = "SELECT * FROM gebruiker inner join manager on manager.gebruiker_id = gebruiker.id where email = '$email'";
+$sql = "SELECT * FROM gebruiker inner join manager on manager.gebruiker_id = gebruiker.id where gebruikersnaam = '$gebruikersnaam'";
 
 $result = mysqli_query($conn, $sql);
 

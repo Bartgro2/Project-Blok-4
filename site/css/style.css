@@ -272,7 +272,15 @@ tbody {
     border-radius: 0 3px 3px 0;
 }
 
-
+.dashboard-container{
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+   
+}
+.groet{
+    display: inline-block;
+}
 
 
 
