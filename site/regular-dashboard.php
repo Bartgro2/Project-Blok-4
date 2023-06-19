@@ -21,9 +21,12 @@ if (!isset($_SESSION['regularid'])) {
 <body>
 
     <?php include 'nav.php'; ?>
-
-    <?php echo "Hallo! " . $_SESSION['username']; ?>
-
+    <p id="greeting">
+     <p><?php echo $_SESSION['username']; ?></p>
+    
+    </p>
+    
+    <script src="Javascript/script.js">  </script>
     
 </body>
 

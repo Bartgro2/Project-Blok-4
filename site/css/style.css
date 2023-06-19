@@ -25,7 +25,7 @@ nav {
     justify-content: center;
     background-color: #1520A6;
     position: relative;
-    min-width: 100px;
+    width: 100%;
 }
 
 nav ul li {
