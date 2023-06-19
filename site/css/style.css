@@ -25,7 +25,8 @@ nav {
     justify-content: center;
     background-color: #1520A6;
     position: relative;
-    width: 100%;
+    left: 0;
+    right: 0;
 }
 
 nav ul li {
@@ -52,12 +53,12 @@ nav ul li a:hover {
 
 .dropdown:hover .submenu {
     display: block;
-    position: relative;
+    position: fixed;
 }
 
 .submenu{
     display: none;
-    position: absolute; 
+    position: fixed; 
 }
 
 .submenu-ruimte{
@@ -216,6 +217,7 @@ div.table-container2 {
     gap: 30px;
     flex-direction: column;
     padding-top: 40px;
+    overflow-x: auto;
 }
 
 .table-workouts {
@@ -249,13 +251,31 @@ tbody {
     background-color: green;
 }
 
-div.container-zoeken{
+.container-zoeken {
     display: flex;
     justify-content: center;
-    padding-top: 20px;   
+    padding-top: 40px;
     width: 100%;
+    margin-top: 10px
 }
 
-button.button-zoeken {
-    height: 25px;
+.container-zoeken input{
+    padding-left: 10px
 }
+
+.search-button {
+    height: 25px;
+    padding: 5px 10px;
+    font-size: 14px; 
+    color: white;
+    border: none;
+    border-radius: 0 3px 3px 0;
+}
+
+
+
+
+
+
+
+

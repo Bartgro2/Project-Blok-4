@@ -71,7 +71,7 @@ if (isset($_GET['submit'])) {
         <div class="container-zoeken">
             <form action="gebruikers.php" class="zoeken" method="get">
 
-                <input type="text" name="zoekveld" id="zoekveld">
+                <input type="text"  name="zoekveld" id="zoekveld">
                 <button class="button-zoeken" type="submit" name="submit">
                     zoeken
                 </button>
