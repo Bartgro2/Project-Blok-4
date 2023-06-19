@@ -52,11 +52,11 @@ $admin_gegevens = mysqli_fetch_assoc($result);
             <p><?php echo "Huisnummer: " . $admin_gegevens['huisnummer']; ?></p>
             <p><?php echo "Postcode: " . $admin_gegevens['postcode']; ?></p>
             <p><?php echo "Plaats: " . $admin_gegevens['plaats']; ?></p>
-            
+
             <h3>Contactgegevens</h3>
             <p><?php echo "Telefoonnummer: " . $admin_gegevens['telefoonnummer']; ?></p>
             <p><?php echo "Mobielnummer: " . $admin_gegevens['mobielnummer']; ?></p>
-
+            <div class="empty-space"></div>
         </div>
     </div>
 

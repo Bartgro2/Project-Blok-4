@@ -49,20 +49,20 @@ nav ul li a:hover {
     position: fixed;
 }
 
-.submenu{
+.submenu {
     display: none;
-    position: fixed; 
+    position: fixed;
 }
 
-.submenu-ruimte{
-    padding-top: 15px; 
-    text-align: right; 
+.submenu-ruimte {
+    padding-top: 15px;
+    text-align: right;
 }
 
-.submenu-ruimte li{
+.submenu-ruimte li {
     background-color: #f9f9f9;
     min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -84,7 +84,7 @@ footer p {
 }
 
 /*   */
-main{
+main {
     height: 100%;
     padding-bottom: 20px;
 }
@@ -196,7 +196,7 @@ form {
 
 /*  workouts.php & gebruikers.php styling */
 
-table{
+table {
     color: white;
 }
 
@@ -221,19 +221,20 @@ div.table-container2 {
     width: 50%;
 }
 
-.table-workouts th,td{
-   padding: 25px;
+.table-workouts th,
+td {
+    padding: 25px;
 }
 
-.table-gebruikers{
+.table-gebruikers {
     width: 100%;
 }
 
-.table-gebruikers td{
+.table-gebruikers td {
     padding: 15px;
 }
 
-.table-gebruikers th{
+.table-gebruikers th {
     padding: 21.65px;
 }
 
@@ -242,8 +243,9 @@ td {
 }
 
 thead {
-    background-color: black; 
+    background-color: black;
 }
+
 tbody {
     background-color: green;
 }
@@ -257,14 +259,14 @@ tbody {
     margin-top: 10px
 }
 
-.container-zoeken input{
+.container-zoeken input {
     padding-left: 10px
 }
 
 .search-button {
     height: 25px;
     padding: 5px 10px;
-    font-size: 14px; 
+    font-size: 14px;
     color: white;
     border: none;
     border-radius: 0 3px 3px 0;
@@ -272,48 +274,48 @@ tbody {
 
 /* dashboards styling ( admin-dashboard.php manager-dashboard.php, , regular-daseboard.php  */
 
-.dashboard-container{
+.dashboard-container {
     width: 960px;
-    margin: 20px auto; 
+    margin: 25px auto;
     padding: 20px;
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
     border: 1px solid #ccc;
     border-radius: 4px;
-   
+    max-height: 500px;
 }
+
 .groet {
     display: block;
     font-style: italic;
-    font-size: 20px; 
-    margin-bottom: 10px; 
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.groet .admin{
+.groet .admin {
     color: red;
 }
 
-.groet .manager{
+.groet .manager {
     color: green;
 }
 
-.groet .regular{
+.groet .regular {
     color: yellow;
 }
+
 .dashboard-details {
-    padding-top: 20px; 
+    padding-top: 20px;
 }
 
 .dashboard-details p {
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
 
 }
 
-.dashboard-details h3{
+.dashboard-details h3 {
     padding-bottom: 5px;
 }
 
-
-
-
-
-
+.empty-space{
+    height: 100px;
+}

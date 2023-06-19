@@ -60,8 +60,9 @@ $admin_gegevens = mysqli_fetch_assoc($result);
             <p><?php echo "afdeling: " . $admin_gegevens['afdeling']; ?></p>
             <p><?php echo "in dienst sinds: " . $admin_gegevens['aantal mensen']; ?></p>
         </div>
+        <div class="empty-space"></div>
     </div>
-
+    <?php include 'footer.php'?>
     <script src="Javascript/script.js"> </script>
 </body>
 
