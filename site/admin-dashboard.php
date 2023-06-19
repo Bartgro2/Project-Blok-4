@@ -34,12 +34,10 @@ $admin_gegevens = mysqli_fetch_assoc($result);
 
 
         <p id="greeting" class="groet"> </p>
-        <p class="groet"><?php echo $_SESSION['username']; ?></p>
+        <p class="groet"> <span class="admin"><?php echo $_SESSION['username']; ?></span></p>
         <p><?php echo "in dienst sinds: " . $admin_gegevens['in dienst']; ?></p>
 
-        <div class="admin-details">
-
-
+        <div class="dashboard-details">
 
             <h3>Persoonlijke gegevens</h3>
             <p><?php echo "Voornaam: " . $admin_gegevens['voornaam']; ?></p>
@@ -54,15 +52,14 @@ $admin_gegevens = mysqli_fetch_assoc($result);
             <p><?php echo "Huisnummer: " . $admin_gegevens['huisnummer']; ?></p>
             <p><?php echo "Postcode: " . $admin_gegevens['postcode']; ?></p>
             <p><?php echo "Plaats: " . $admin_gegevens['plaats']; ?></p>
+            
             <h3>Contactgegevens</h3>
             <p><?php echo "Telefoonnummer: " . $admin_gegevens['telefoonnummer']; ?></p>
             <p><?php echo "Mobielnummer: " . $admin_gegevens['mobielnummer']; ?></p>
 
-
-
         </div>
     </div>
-    </div>
+
     <script src="Javascript/script.js"> </script>
 </body>
 

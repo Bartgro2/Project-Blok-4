@@ -12,12 +12,6 @@ body {
 
 /*  navigatie     */
 
-main{
-    height: 100%;
-    padding-bottom: 20px;
-}
-
-
 nav {
     display: flex;
     height: 50px;
@@ -25,8 +19,7 @@ nav {
     justify-content: center;
     background-color: #1520A6;
     position: relative;
-    left: 0;
-    right: 0;
+    width: 100%;
 }
 
 nav ul li {
@@ -90,7 +83,14 @@ footer p {
     font-size: 15px;
 }
 
-/*  form styling ( inloggen, registeren & nieuwe-workouts.php  */
+/*   */
+main{
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+
+/*  form styling ( inloggen, registeren, nieuwe-workouts.php & gebruikers.php  */
 .account-pagina {
 
     display: flex;
@@ -162,8 +162,6 @@ footer p {
     cursor: pointer;
 }
 
-
-
 .input-groep [type="text"],
 input[type="tel"],
 input[type="email"],
@@ -176,7 +174,6 @@ select {
 
 .radio-buttons {
     display: inline-flex;
-
     align-items: center;
 }
 
@@ -197,7 +194,7 @@ form {
     max-width: 400px;
 }
 
-/*  workouts.php styling */
+/*  workouts.php & gebruikers.php styling */
 
 table{
     color: white;
@@ -251,6 +248,7 @@ tbody {
     background-color: green;
 }
 
+/* zoekbalk styling  */
 .container-zoeken {
     display: flex;
     justify-content: center;
@@ -272,6 +270,8 @@ tbody {
     border-radius: 0 3px 3px 0;
 }
 
+/* dashboards styling ( admin-dashboard.php manager-dashboard.php, , regular-daseboard.php  */
+
 .dashboard-container{
     width: 960px;
     margin: 20px auto; 
@@ -288,13 +288,21 @@ tbody {
     margin-bottom: 10px; 
 }
 
-.admin-details {
+.groet .admin{
+    color: red;
+}
+
+.dashboard-details {
     padding-top: 20px; 
 }
 
-.admin-details p {
+.dashboard-details p {
     padding-bottom: 5px; 
 
+}
+
+.dashboard-details h3{
+    padding-bottom: 5px;
 }
 
 
