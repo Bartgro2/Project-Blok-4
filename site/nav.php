@@ -35,7 +35,6 @@
                 <?php } else if (isset($_SESSION['regularid'])) { ?>
                 <li> <a href="index.php">Home</a></li>
                 <li> <a href="workouts.php">workouts</a></li>
-                <li> <a href="logout.php">outloggen</a></li>
                 <li class="dropdown">
                     <i class="fa-solid fa-gear"></i>
                     <ul class="submenu">
