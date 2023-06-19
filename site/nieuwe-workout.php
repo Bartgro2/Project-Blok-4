@@ -3,12 +3,16 @@ require 'database.php';
 
 session_start();
 
-if (is_null($_SESSION['adminid'] || $_SESSION['managerid'])) {
-    header("location: inloggen.php");
+
+if (isset($_SESSION['adminid']))  { 
+        header("location: inloggen.php");
     exit();
 }
 
-
+else if(isset($_SESSION['adminid'])) {
+    header("location: inloggen.php");
+    exit();
+}
 ?>
 
 
