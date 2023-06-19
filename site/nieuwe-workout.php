@@ -4,16 +4,17 @@ require 'database.php';
 session_start();
 
 
-if (isset($_SESSION['adminid']))  { 
+     if (isset($_SESSION['regularid'])) { 
         header("location: inloggen.php");
-    exit();
-}
+        exit();
 
-else if(isset($_SESSION['adminid'])) {
-    header("location: inloggen.php");
-    exit();
-}
+     } else if (empty($_SESSION)){ 
+        header("location: inloggen.php");
+        exit();
+     }
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -27,6 +28,7 @@ else if(isset($_SESSION['adminid'])) {
 </head>
 
 <body>
+    <?php include 'nav.php'; ?>
     <main>
         <div class="account-pagina">
             <div class="form-panel">
@@ -53,6 +55,7 @@ else if(isset($_SESSION['adminid'])) {
             </div>
         </div>
     </main>
+    <?php require 'footer.php'; ?>
 </body>
 
 </html>

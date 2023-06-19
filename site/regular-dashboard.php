@@ -59,7 +59,7 @@ $admin_gegevens = mysqli_fetch_assoc($result);
             <div class="empty-space"></div>
         </div>
     </div>
-
+    <?php include 'footer.php'; ?>
     <script src="Javascript/script.js"> </script>
 </body>
 

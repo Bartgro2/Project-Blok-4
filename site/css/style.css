@@ -319,3 +319,19 @@ tbody {
 .empty-space{
     height: 100px;
 }
+
+h1{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    height: 400px;
+}
