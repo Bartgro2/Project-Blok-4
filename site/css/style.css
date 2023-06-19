@@ -292,6 +292,13 @@ tbody {
     color: red;
 }
 
+.groet .manager{
+    color: green;
+}
+
+.groet .regular{
+    color: yellow;
+}
 .dashboard-details {
     padding-top: 20px; 
 }

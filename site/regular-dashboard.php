@@ -34,7 +34,7 @@ $admin_gegevens = mysqli_fetch_assoc($result);
 
 
         <p id="greeting" class="groet"> </p>
-        <p class="groet"> <span class="admin"><?php echo $_SESSION['username']; ?></span></p>
+        <p class="groet"> <span class="regular"><?php echo $_SESSION['username']; ?></span></p>
         <p><?php echo "regular gebruiker sinds: " . $admin_gegevens['per wanneer']; ?></p>
 
         <div class="dashboard-details">

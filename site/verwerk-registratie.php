@@ -28,7 +28,7 @@ if (!empty($_POST['gebruikersnaam'])) {
     $postcode         = $_POST['postcode'];
     $land             = $_POST['land'];
     $rol              = $_POST['rol'];
-
+    
 
 
 

@@ -30,11 +30,6 @@
                         <input type="password" name="wachtwoord" id="wachtwoord">
                     </div>
 
-                    <div class="input-groep">
-                        <p>Nog geen account?</p>
-                        <p><a href="registratie.php">Registeer hier</a></p>
-                    </div>
-
                     <div class="button-container">
                         <button type="submit" class="input-button">Aanmelden</button>
                     </div>
