@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header($_SERVER["SERVER_PROTOCOL"] . " 405 Method Not Allowed", true, 405);
-    include 'inloggen.php';
+    echo 'Deze web pagina bestaat niet';
     exit;
 }
 

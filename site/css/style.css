@@ -83,7 +83,6 @@ footer p {
     font-size: 15px;
 }
 
-/*   */
 main {
     height: 100%;
     padding-bottom: 20px;
@@ -92,11 +91,10 @@ main {
 
 /*  form styling ( inloggen, registeren, nieuwe-workouts.php & gebruikers.php  */
 .account-pagina {
-
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 10px);
+    min-height: calc(100vh - 10px); /* browser window minimaal hoogte en haal 10px van vh af  */ 
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -119,10 +117,9 @@ main {
     padding: 20px 0;
     margin-bottom: 20px;
     color: #007bff;
-
 }
 
-.form-panel input:not(:last-child) {
+.form-panel input:not(:last-child) { /* selecteer alles behalve de laatste input veld binnen form-panel*/
     margin-bottom: 10px;
 }
 
@@ -214,15 +211,14 @@ div.table-container2 {
     gap: 30px;
     flex-direction: column;
     padding-top: 40px;
-    overflow-x: auto;
+    overflow-x: auto; /* voegt een scrollbalk toe als de table te groot is */
 }
 
 .table-workouts {
     width: 50%;
 }
 
-.table-workouts th,
-td {
+.table-workouts th,td {
     padding: 25px;
 }
 
@@ -309,7 +305,6 @@ tbody {
 
 .dashboard-details p {
     padding-bottom: 5px;
-
 }
 
 .dashboard-details h3 {

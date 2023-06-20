@@ -7,7 +7,7 @@
                 <li> <a href="nieuwe-workout.php">workout maken</a></li>
                 <li> <a href="workouts.php">workouts</a></li>
                 <li> <a href="gebruikers.php">gebruikers</a></li>
-                <li> <a href="registratie.php">gebruikers maken</a></li>
+                <li> <a href="nieuwe-gebruiker.php">nieuwe gebruiker</a></li>
                 <li class="dropdown">
                     <i class="fa-solid fa-gear"></i>
                     <ul class="submenu">

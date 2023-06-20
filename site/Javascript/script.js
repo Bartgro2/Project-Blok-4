@@ -1,6 +1,6 @@
 function browserGreeting() {
-    const language = navigator.language;
-    let greeting = "";
+    const language = navigator.language; // haalt de taal van de webrowers op
+    let greeting = "";  // maak een lege string 
   
     if (language === "en") {
       greeting = "Hello,";
@@ -12,12 +12,12 @@ function browserGreeting() {
       greeting = "welkom,";
     }
   
-    const greetingElement = document.getElementById("greeting");
+    const greetingElement = document.getElementById("greeting"); 
     if (greetingElement) {
-      greetingElement.textContent = greeting;
+      greetingElement.textContent = greeting;  // textcontent string property
     }
   }
   
-  window.addEventListener("DOMContentLoaded", browserGreeting);
+  window.addEventListener("DOMContentLoaded", browserGreeting); // Deze code voegt een functie toe die wordt uitgevoerd zodra de webpagina volledig is geladen.
     
     
