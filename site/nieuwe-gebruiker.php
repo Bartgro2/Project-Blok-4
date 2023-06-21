@@ -28,7 +28,7 @@ if (!isset($_SESSION['adminid'])) {
     <main>
         <div class="account-pagina">
             <div class="form-panel">
-                <h1> Aanmelden</h1>
+                <h1> gebruiker aanmaken</h1>
 
 
                 <form action="verwerk-registratie.php" method="post">
