@@ -31,7 +31,7 @@ if (!isset($_SESSION['adminid'])) {
                 <h1> gebruiker aanmaken</h1>
 
 
-                <form action="verwerk-registratie.php" method="post">
+                <form action="verwerk-nieuwe-gebruiker.php" method="post">
                     <div class="input-groep">
                         <label class="input-label" for="gebruikersnaam">gebruikersnaam</label>
                         <input type="text" name="gebruikersnaam" id="gebruikersnaam">

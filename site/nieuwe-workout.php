@@ -33,7 +33,7 @@ session_start();
         <div class="account-pagina">
             <div class="form-panel">
                 <h1>workouts aanmaken</h1>
-                <form action="verwerk-nieuwe-workouts.php" method="post">
+                <form action="verwerk-nieuwe-workout.php" method="post">
 
                     <div class="input-groep">
                         <label for="omschrijving">omschrijving</label>
